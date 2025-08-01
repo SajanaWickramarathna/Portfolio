@@ -9,7 +9,7 @@ import {
   FaWhatsapp,
 } from "react-icons/fa";
 import Footer from "../components/footer";
-import back from "../assets/backgroundhero.jpg";
+
 import saj from "../assets/saj.jpg";
 import { useNavigate } from "react-router-dom";
 
@@ -35,7 +35,7 @@ const Hero = () => {
       {/* Background with animation */}
       <motion.div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url('${back}')` }}
+        style={{ backgroundImage: `url('/backgroundhero.jpg')` }}
         initial={{ scale: 1.1 }}
         animate={{ scale: 1 }}
         transition={{

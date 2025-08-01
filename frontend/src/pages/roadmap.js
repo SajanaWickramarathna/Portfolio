@@ -9,7 +9,7 @@ import {
   SiNextdotjs, SiTailwindcss, SiMysql
 } from "react-icons/si";
 import { MdOutlineDesignServices } from "react-icons/md";
-import back from "../assets/backgroundhero.jpg";
+
 import Footer from '../components/footer';
 
 const roadmap = [
@@ -65,7 +65,7 @@ const Roadmap = () => {
       {/* Background with animation */}
       <motion.div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url('${back}')` }}
+        style={{ backgroundImage: `url('/backgroundhero.jpg')` }}
         initial={{ scale: 1.1 }}
         animate={{ scale: 1 }}
         transition={{
@@ -88,7 +88,7 @@ const Roadmap = () => {
           <motion.h2
             className="text-4xl md:text-5xl font-bold mb-10 mt-8 tracking-tight text-[#58A6FF]"
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
@@ -105,7 +105,7 @@ const Roadmap = () => {
                   key={index}
                   className={`mb-16 w-full flex ${isLeft ? "justify-start" : "justify-end"} relative z-10`}
                   initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >

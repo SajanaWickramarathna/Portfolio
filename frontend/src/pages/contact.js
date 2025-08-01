@@ -1,14 +1,14 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaEnvelope, FaMapMarkerAlt, FaPhone, FaGithub, FaLinkedin } from "react-icons/fa";
-import back from "../assets/backgroundhero.jpg";
+
 
 const Contact = () => (
   <div className="relative min-h-screen font-inter overflow-hidden text-white">
     {/* Background with animation */}
     <motion.div
       className="absolute inset-0 bg-cover bg-center"
-      style={{ backgroundImage: `url('${back}')` }}
+      style={{ backgroundImage: `url('/backgroundhero.jpg')` }}
       initial={{ scale: 1.1 }}
       animate={{ scale: 1 }}
       transition={{
@@ -30,7 +30,7 @@ const Contact = () => (
         <motion.h2
           className="text-4xl md:text-5xl font-bold mb-6 tracking-tight text-[#58A6FF]"
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
@@ -40,7 +40,7 @@ const Contact = () => (
         <motion.p
           className="text-[#8B949E] mb-10 text-lg leading-relaxed"
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
         >
@@ -76,7 +76,7 @@ const Contact = () => (
           href="mailto:sajanawickramarathhna143@gmail.com"
           className="bg-gradient-to-r from-[#F78166] to-[#FF9E7D] hover:from-[#FF9E7D] hover:to-[#F78166] text-[#0D1117] font-bold px-6 py-3 rounded-full shadow-md"
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}
         >

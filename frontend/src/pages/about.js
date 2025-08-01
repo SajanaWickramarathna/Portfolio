@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import back from "../assets/backgroundhero.jpg";
+
 import { useNavigate } from "react-router-dom";
 import Footer from '../components/footer';
 const Cv = "/CV.pdf";
@@ -13,7 +13,7 @@ const About = () => {
       {/* Background with animation */}
       <motion.div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url('${back}')` }}
+        style={{ backgroundImage: `url('/backgroundhero.jpg')` }}
         initial={{ scale: 1.1 }}
         animate={{ scale: 1 }}
         transition={{
@@ -36,7 +36,7 @@ const About = () => {
           <motion.h2
             className="text-4xl md:text-5xl font-bold mb-6 tracking-tight text-[#58A6FF]"
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
@@ -46,7 +46,7 @@ const About = () => {
           <motion.p
             className="text-lg md:text-xl text-[#C9D1D9] leading-relaxed max-w-3xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}
             viewport={{ once: true }}
           >
@@ -57,7 +57,7 @@ const About = () => {
           <motion.div
             className="mt-10 flex justify-center gap-4 flex-wrap"
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.6 }}
             viewport={{ once: true }}
           >

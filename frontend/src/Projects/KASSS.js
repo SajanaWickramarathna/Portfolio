@@ -2,8 +2,7 @@ import React from "react";
 import { SiMongodb, SiExpress, SiReact, SiNodedotjs, SiTailwindcss } from "react-icons/si";
 import { motion } from "framer-motion";
 import Footer from "../components/footer";
-import khb from "../assets/saj.jpg"; // ✅ Replace with your image
-import back from "../assets/backgroundhero.jpg"; // ✅ Background image
+import khb from "../assets/saj.jpg"; 
 
 const ProjectHero = () => {
   return (
@@ -11,7 +10,7 @@ const ProjectHero = () => {
       {/* Background animation */}
       <motion.div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url('${back}')` }}
+        style={{ backgroundImage: `url('/backgroundhero.jpg')` }}
         initial={{ scale: 1.1 }}
         animate={{ scale: 1 }}
         transition={{
@@ -31,7 +30,7 @@ const ProjectHero = () => {
           <motion.h2
             className="text-4xl md:text-5xl font-bold text-center mb-10 text-[#58A6FF]"
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
@@ -41,7 +40,7 @@ const ProjectHero = () => {
           <motion.p
             className="text-center text-lg md:text-xl text-[#C9D1D9] max-w-3xl mx-auto mb-12 leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}
             viewport={{ once: true }}
           >

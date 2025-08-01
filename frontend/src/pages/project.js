@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-import back from "../assets/backgroundhero.jpg";
-import { useNavigate } from "react-router-dom";
+import back from "../assets/saj.jpg";
+
 import Footer from "../components/footer";
 
 const projects = [
@@ -57,14 +57,14 @@ const projects = [
 ];
 
 const Projects = () => {
-  const navigate = useNavigate();
+ 
 
   return (
     <div className="relative min-h-screen font-inter overflow-hidden text-white">
       {/* Background */}
       <motion.div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url('${back}')` }}
+        style={{ backgroundImage: `url('/backgroundhero.jpg')` }}
         initial={{ scale: 1.1 }}
         animate={{ scale: 1 }}
         transition={{
@@ -84,7 +84,7 @@ const Projects = () => {
         <motion.h2
           className="text-4xl md:text-5xl font-bold mb-10 mt-12 tracking-tight text-[#58A6FF]"
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
@@ -96,7 +96,7 @@ const Projects = () => {
             <motion.div
               key={i}
               initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.1, duration: 0.5 }}
               viewport={{ once: true }}
               className="group bg-[#161B22] rounded-2xl overflow-hidden shadow-md hover:shadow-[#58A6FF]/30 transition-all duration-300 transform hover:-translate-y-1"
@@ -109,7 +109,7 @@ const Projects = () => {
                 />
               </div>
               <div className="p-5 flex flex-col justify-between h-[220px]">
-                <h3 className="text-xl font-semibold text-[#F78166] mb-1">
+                <h3 className="text-xl font-semibold text-[#58A6FF] mb-1">
                   {project.title}
                 </h3>
                 <p className="text-[#8B949E] text-sm mb-4 line-clamp-3">
@@ -119,8 +119,11 @@ const Projects = () => {
                   href={project.link}
                   
                   rel="noopener noreferrer"
-                  className="mt-auto mx-auto inline-flex items-center justify-center w-80 py-2 bg-[#58A6FF] hover:bg-[#1F6FEB] text-[#0D1117] font-bold rounded-full transition duration-300 text-sm"
+                  className="mt-auto mx-auto inline-flex items-center justify-center w-80 py-2 bg-gradient-to-r from-[#F78166] to-[#FF9E7D] hover:from-[#FF9E7D] hover:to-[#F78166] text-[#0D1117] text-[#0D1117] 
+                  font-bold rounded-full transition duration-300 text-sm"
+
                 >
+                  
                   View Project
                 </a>
               </div>

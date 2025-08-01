@@ -8,7 +8,6 @@ import {
   FaJava,
   FaReact,
   FaNodeJs,
-  FaDatabase,
   FaPython,
 } from "react-icons/fa";
 import {
@@ -19,7 +18,7 @@ import {
   SiFigma,
   SiKotlin,
 } from "react-icons/si";
-import back from "../assets/backgroundhero.jpg";
+
 import Footer from "../components/footer";
 
 const skills = [
@@ -73,7 +72,7 @@ const SkillTree = () => {
       {/* Background with animation */}
       <motion.div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url('${back}')` }}
+        style={{ backgroundImage: `url('/backgroundhero.jpg')` }}
         initial={{ scale: 1.1 }}
         animate={{ scale: 1 }}
         transition={{
@@ -94,7 +93,7 @@ const SkillTree = () => {
           <motion.h2
             className="text-4xl md:text-5xl font-bold mb-6 tracking-tight text-[#58A6FF]"
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
@@ -107,7 +106,7 @@ const SkillTree = () => {
                 key={index}
                 className="bg-[#161B22] p-6 rounded-2xl shadow-md border border-[#1F2937] hover:border-[#58A6FF] transition-all"
                 initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <h3 className={`text-xl font-semibold mb-4 ${section.color}`}>
