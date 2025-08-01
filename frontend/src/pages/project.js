@@ -82,7 +82,7 @@ const Projects = () => {
         className="relative z-10 flex flex-col items-center justify-center px-6 py-24"
       >
         <motion.h2
-          className="text-4xl md:text-5xl font-bold mb-10 tracking-tight text-[#58A6FF]"
+          className="text-4xl md:text-5xl font-bold mb-10 mt-12 tracking-tight text-[#58A6FF]"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
