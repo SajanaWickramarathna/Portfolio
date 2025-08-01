@@ -1,7 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
-import back from "../assets/saj.jpg";
 
+import KASS from "../assets/KASS.png";
+import KHB from "../assets/KHB.png";
+import Cleanwave from "../assets/cleanWave.png";
+import csDrop from "../assets/csDrop.png";
+import Finora from "../assets/finora.png";
+import Pcify from "../assets/pcify.png"
 import Footer from "../components/footer";
 
 const projects = [
@@ -9,49 +14,49 @@ const projects = [
     title: "KHB Associates",
     description:
       "Website for a import and export company with modern design.",
-    image: back,
+    image: KHB,
     link: "/khb",
   },
   {
     title: "CleanWave Laundry",
     description:
       "Laundry management system with user-friendly interface and booking features.",
-    image: back,
+    image: Cleanwave,
     link: "/cleanwave",
   },
   {
     title: "KASSS Advertising",
     description:
       "Advertising agency website with modern design and service showcase.",
-    image: back,
+    image: KASS,
     link: "/kasss",
   },
   {
     title: "CS Drop",
     description:
       "Website for a online shopping platform with responsive design and product showcase.",
-    image: back,
+    image: csDrop,
     link: "/csdrop",
   },
   {
     title: "Finora App",
     description:
       "Mobile app for managing personal finances with budget tracking.",
-    image: back,
+    image: Finora,
     link: "/finora",
   },
   {
     title: "PCIFY",
     description:
       "Mobile app for PC selling and buying with user-friendly interface.",
-    image: back,
+    image: Pcify,
     link: "/pcify",
   },
   {
     title: "Earn With What You Know",
     description:
       "website for a knowledge-sharing platform where users can monetize their expertise.",
-    image: back,
+    image: "",
     link: "/ewwyk",
   },
 ];
