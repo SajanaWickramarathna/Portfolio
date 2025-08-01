@@ -1,73 +1,107 @@
 import React from "react";
 import { SiMongodb, SiExpress, SiReact, SiNodedotjs, SiTailwindcss } from "react-icons/si";
 import { motion } from "framer-motion";
-import khb from "../assets/saj.jpg"; // ✅ Replace with your actual path
+import Footer from "../components/footer";
+import khb from "../assets/saj.jpg"; // ✅ Replace with your image
+import back from "../assets/backgroundhero.jpg"; // ✅ Background image
 
-const ProjectCard = () => {
+const ProjectHero = () => {
   return (
-    <section
-      id="khb"
-      className="bg-[#0D1117] text-[#C9D1D9] px-6 py-24 scroll-mt-24"
-    >
-      <div className="max-w-6xl mx-auto bg-[#161B22] rounded-2xl shadow-lg p-10 md:p-16">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-[#58A6FF] mb-4">
+    <div className="relative min-h-screen font-inter overflow-hidden text-white">
+      {/* Background animation */}
+      <motion.div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: `url('${back}')` }}
+        initial={{ scale: 1.1 }}
+        animate={{ scale: 1 }}
+        transition={{
+          duration: 30,
+          repeat: Infinity,
+          repeatType: "reverse",
+          ease: "easeInOut",
+        }}
+      />
+
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#0D1117]/90 to-[#161B22]/95" />
+
+      {/* Content Section */}
+      <section className="relative z-10 flex items-center justify-center min-h-screen px-6 py-20 mt-10">
+        <div className="container mx-auto max-w-6xl">
+          <motion.h2
+            className="text-4xl md:text-5xl font-bold text-center mb-10 text-[#58A6FF]"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
             KHB Associates
-          </h2>
-          <p className="text-[#8B949E] max-w-3xl mx-auto text-lg">
+          </motion.h2>
+
+          <motion.p
+            className="text-center text-lg md:text-xl text-[#C9D1D9] max-w-3xl mx-auto mb-12 leading-relaxed"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.6 }}
+            viewport={{ once: true }}
+          >
             KHB Associates is a custom corporate website focused on building trust through professional aesthetics and modern design. It includes sections for services, client testimonials, and a contact form.
-          </p>
-        </div>
+          </motion.p>
 
-        {/* Image and Tech Stack */}
-        <div className="flex flex-col md:flex-row items-center gap-10">
-          {/* Image */}
-          <div className="w-full md:w-2/3 rounded-xl overflow-hidden shadow-md">
-            <img
-              src={khb}
-              alt="KHB Associates"
-              className="w-full h-full object-cover"
-            />
-          </div>
+          <div className="flex flex-col md:flex-row gap-10 items-center">
+            {/* Image */}
+            <motion.div
+              whileHover={{ scale: 1.02 }}
+              className="w-full md:w-[55%] lg:w-[50%] xl:w-[45%] max-h-[300px] rounded-xl overflow-hidden shadow-md border border-[#21262D] transform scale-95"
 
-          {/* Tech Stack */}
-          <div className="w-full md:w-1/3 text-center md:text-left">
-            <h3 className="text-2xl font-semibold text-[#C9D1D9] mb-4">
-              Tech Stack:
-            </h3>
-            <div className="flex flex-wrap gap-3 justify-center md:justify-start">
-              <span className="bg-[#21262D] text-sm px-4 py-2 rounded-full flex items-center gap-2">
-                <SiMongodb className="text-green-500" /> MongoDB
-              </span>
-              <span className="bg-[#21262D] text-sm px-4 py-2 rounded-full flex items-center gap-2">
-                <SiExpress className="text-gray-300" /> Express.js
-              </span>
-              <span className="bg-[#21262D] text-sm px-4 py-2 rounded-full flex items-center gap-2">
-                <SiReact className="text-blue-400" /> React
-              </span>
-              <span className="bg-[#21262D] text-sm px-4 py-2 rounded-full flex items-center gap-2">
-                <SiNodedotjs className="text-green-400" /> Node.js
-              </span>
-              <span className="bg-[#21262D] text-sm px-4 py-2 rounded-full flex items-center gap-2">
-                <SiTailwindcss className="text-teal-400" /> Tailwind CSS
-              </span>
-            </div>
-
-            {/* Button */}
-            <a
-              href="https://github.com/your-link" // Replace this
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block mt-8 px-6 py-3 rounded-full text-[#0D1117] bg-[#58A6FF] font-semibold hover:bg-[#1f6feb] transition"
             >
-              Source Code
-            </a>
+              <img
+                src={khb}
+                alt="KHB Associates"
+                className="w-full h-full object-cover rounded-xl"
+              />
+            </motion.div>
+
+            {/* Tech Stack + Button */}
+            <div className="w-full md:w-1/3 text-center md:text-left">
+              <h3 className="text-2xl font-semibold text-[#C9D1D9] mb-6">
+                Tech Stack:
+              </h3>
+              <div className="flex flex-wrap gap-3 justify-center md:justify-start">
+                {[
+                  { icon: <SiMongodb className="text-green-500" />, label: "MongoDB" },
+                  { icon: <SiExpress className="text-gray-300" />, label: "Express.js" },
+                  { icon: <SiReact className="text-blue-400" />, label: "React" },
+                  { icon: <SiNodedotjs className="text-green-400" />, label: "Node.js" },
+                  { icon: <SiTailwindcss className="text-teal-400" />, label: "Tailwind CSS" },
+                ].map((tech, i) => (
+                  <span
+                    key={i}
+                    className="bg-[#21262D] hover:shadow-[#58A6FF]/30 shadow-sm text-sm px-4 py-2 rounded-full flex items-center gap-2 transition duration-300"
+                  >
+                    {tech.icon} {tech.label}
+                  </span>
+                ))}
+              </div>
+
+              {/* CTA Button */}
+              <motion.a
+                whileHover={{ scale: 1.05 }}
+                href="https://github.com/your-link" // Replace with actual repo
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block mt-10 px-6 py-3 rounded-full text-[#0D1117] bg-[#58A6FF] font-semibold hover:bg-[#1f6feb] transition-all duration-300"
+              >
+                Source Code
+              </motion.a>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <Footer />
+    </div>
   );
 };
 
-export default ProjectCard;
+export default ProjectHero;

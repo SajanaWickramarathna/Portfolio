@@ -13,6 +13,12 @@ import Roadmap from './pages/roadmap.js';
 import Skills from './pages/skills.js';
 import Projects from './pages/project.js';
 import Pcify from './Projects/pcify.js';
+import KASSS from './Projects/KASSS.js';
+import Cleanwave from './Projects/cleanwave.js';
+import KHB from './Projects/khb.js';
+import Finora from './Projects/finora.js';
+import EWWYK from './Projects/earnwithwhatyouknow.js';
+import CSDrop from './Projects/csdrop.js';
 function App() {
   return (
     <div className="App">
@@ -26,6 +32,12 @@ function App() {
         <Route path="/skills" element={<Skills />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/pcify" element={<Pcify />} />
+        <Route path="/kasss" element={<KASSS />} />
+        <Route path="/cleanwave" element={<Cleanwave />} />
+        <Route path="/khb" element={<KHB />} />
+        <Route path="/finora" element={<Finora />} />
+        <Route path="/ewwyk" element={<EWWYK />} />
+        <Route path="/csdrop" element={<CSDrop />} />
 
       </Routes>
       
