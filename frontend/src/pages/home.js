@@ -1,22 +1,35 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaGithub, FaLinkedin, FaTwitter, FaInstagram, FaEnvelope, FaWhatsapp } from "react-icons/fa";
-import Footer from '../components/footer';
-import back from '../assets/backgroundhero.jpg';
-import saj from '../assets/saj.jpg';
+import {
+  FaGithub,
+  FaLinkedin,
+  FaTwitter,
+  FaInstagram,
+  FaEnvelope,
+  FaWhatsapp,
+} from "react-icons/fa";
+import Footer from "../components/footer";
+import back from "../assets/backgroundhero.jpg";
+import saj from "../assets/saj.jpg";
 import { useNavigate } from "react-router-dom";
 
 const socialLinks = [
   { icon: <FaGithub size={22} />, url: "https://github.com/yourusername" },
-  { icon: <FaLinkedin size={22} />, url: "https://linkedin.com/in/yourusername" },
+  {
+    icon: <FaLinkedin size={22} />,
+    url: "https://linkedin.com/in/yourusername",
+  },
   { icon: <FaTwitter size={22} />, url: "https://twitter.com/yourusername" },
-  { icon: <FaInstagram size={22} />, url: "https://instagram.com/yourusername" },
+  {
+    icon: <FaInstagram size={22} />,
+    url: "https://instagram.com/yourusername",
+  },
   { icon: <FaWhatsapp size={22} />, url: "https://wa.me/yourphonenumber" },
-  { icon: <FaEnvelope size={22} />, url: "mailto:your.email@example.com" }
+  { icon: <FaEnvelope size={22} />, url: "mailto:your.email@example.com" },
 ];
 
 const Hero = () => {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
   return (
     <div className="relative min-h-screen font-inter overflow-hidden text-white">
       {/* Background with animation */}
@@ -25,14 +38,22 @@ const Hero = () => {
         style={{ backgroundImage: `url('${back}')` }}
         initial={{ scale: 1.1 }}
         animate={{ scale: 1 }}
-        transition={{ duration: 30, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" }}
+        transition={{
+          duration: 30,
+          repeat: Infinity,
+          repeatType: "reverse",
+          ease: "easeInOut",
+        }}
       />
 
       {/* Overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#0D1117]/90 to-[#161B22]/95" />
 
       {/* Content */}
-      <section className="relative z-10 flex items-center justify-center min-h-screen px-6 py-20 mt-10"  id="home">
+      <section
+        className="relative z-10 flex items-center justify-center min-h-screen px-6 py-20 mt-10"
+        id="home"
+      >
         <div className="container mx-auto max-w-7xl flex flex-col md:flex-row items-center justify-between gap-14">
           {/* Left Section */}
           <motion.div
@@ -66,7 +87,9 @@ const Hero = () => {
             </h2>
 
             <p className="text-[#C9D1D9]/90 text-base md:text-lg leading-relaxed max-w-xl mb-8">
-              I create immersive, performant, and intuitive digital experiences using modern tech stacks. I love turning ideas into functional, beautiful interfaces that users love.
+              I create immersive, performant, and intuitive digital experiences
+              using modern tech stacks. I love turning ideas into functional,
+              beautiful interfaces that users love.
             </p>
 
             {/* CTA Buttons */}
