@@ -83,7 +83,7 @@ const CleanWaveSys = () => {
             </div>
 
             <motion.a
-              href="https://github.com/SajanaWickramarathna/CleanWave"
+              href="https://github.com/SajanaWickramarathna/CSdrop"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
