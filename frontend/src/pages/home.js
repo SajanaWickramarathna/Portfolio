@@ -120,7 +120,7 @@ const Hero = () => {
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#8B949E] hover:text-[#58A6FF] transition-all duration-300"
+                  className="text-[#58A6FF] hover:text-[#F78166] text-xl transition-all duration-300"
                   whileHover={{ y: -3, scale: 1.2 }}
                   aria-label={`Social link`}
                 >

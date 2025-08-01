@@ -1,7 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaEnvelope, FaMapMarkerAlt, FaPhone, FaGithub, FaLinkedin } from "react-icons/fa";
-
+import {
+  FaEnvelope,
+  FaMapMarkerAlt,
+  FaPhone,
+  FaGithub,
+  FaLinkedin,
+} from "react-icons/fa";
 
 const Contact = () => (
   <div className="relative min-h-screen font-inter overflow-hidden text-white">
@@ -44,13 +49,23 @@ const Contact = () => (
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+          I'm always open to discussing new projects, creative ideas, or
+          opportunities to be part of your vision.
         </motion.p>
 
-        <div className="space-y-4 text-left text-[#C9D1D9] text-base mb-10">
+        <motion.div
+          className="space-y-4 text-left text-[#C9D1D9] text-base mb-10"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          viewport={{ once: true }}
+        >
           <p className="flex items-center gap-3">
-            <FaEnvelope className="text-[#58A6FF]" /> 
-            <a href="mailto:sajanawickramarathhna143@gmail.com" className="hover:text-[#F78166] transition">
+            <FaEnvelope className="text-[#58A6FF]" />
+            <a
+              href="mailto:sajanawickramarathhna143@gmail.com"
+              className="hover:text-[#F78166] transition"
+            >
               sajanawickramarathhna143@gmail.com
             </a>
           </p>
@@ -63,14 +78,24 @@ const Contact = () => (
             +94 70 142 2030
           </p>
           <div className="flex gap-6 mt-6">
-            <a href="https://github.com/SajanaWickramarathna" target="_blank" rel="noopener noreferrer" className="text-[#58A6FF] hover:text-[#F78166] text-xl">
+            <a
+              href="https://github.com/SajanaWickramarathna"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#58A6FF] hover:text-[#F78166] text-xl"
+            >
               <FaGithub />
             </a>
-            <a href="https://www.linkedin.com/in/sajana-wickramarathna-a4b4062b6/" target="_blank" rel="noopener noreferrer" className="text-[#58A6FF] hover:text-[#F78166] text-xl">
+            <a
+              href="https://www.linkedin.com/in/sajana-wickramarathna-a4b4062b6/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#58A6FF] hover:text-[#F78166] text-xl"
+            >
               <FaLinkedin />
             </a>
           </div>
-        </div>
+        </motion.div>
 
         <motion.a
           href="mailto:sajanawickramarathhna143@gmail.com"
