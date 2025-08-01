@@ -1,12 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
 import {
-  FaHtml5, FaCss3Alt, FaWordpress, FaJs, FaReact,
-  FaNodeJs, FaDocker
+  FaHtml5, FaCss3Alt, FaJs, FaReact,
+  FaNodeJs, FaDocker, FaPython,FaJava, 
 } from "react-icons/fa";
 import {
   SiPhp, SiMongodb, SiExpress, SiGraphql,
-  SiNextdotjs, SiTailwindcss, SiMysql
+  SiNextdotjs, SiTailwindcss, SiMysql, SiC , SiKotlin, SiFlutter,SiPostgresql ,
 } from "react-icons/si";
 import { MdOutlineDesignServices } from "react-icons/md";
 
@@ -26,11 +26,18 @@ const roadmap = [
   },
   {
     year: "2021",
-    frontend: [{ name: "WordPress", icon: <FaWordpress /> }],
+    backend: [{ name: "Python", icon: <FaPython /> }],
   },
   {
     year: "2022",
     frontend: [{ name: "JavaScript", icon: <FaJs /> }],
+  },
+  {
+    year: "2023",
+    backend: [
+      { name: "java", icon: <FaJava /> },
+      { name: "C", icon: <SiC  /> },
+    ],
   },
   {
     year: "2024",
@@ -42,6 +49,7 @@ const roadmap = [
       { name: "Node.js", icon: <FaNodeJs /> },
       { name: "Express.js", icon: <SiExpress /> },
       { name: "MongoDB", icon: <SiMongodb /> },
+      { name: "Kotlin", icon: <SiKotlin /> },
     ],
   },
   {
@@ -52,8 +60,9 @@ const roadmap = [
         { name: "UI/UX Design", icon: <MdOutlineDesignServices /> },
       ],
       backend: [
-        { name: "Docker", icon: <FaDocker /> },
-        { name: "GraphQL", icon: <SiGraphql /> },
+        { name: "Flutter", icon: <SiFlutter  /> },
+        { name: "React Native", icon: <FaReact /> },
+        { name: "OOSQL", icon: <SiPostgresql  /> }
       ],
     },
   },
