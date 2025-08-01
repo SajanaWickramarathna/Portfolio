@@ -60,13 +60,13 @@ const Contact = () => (
           </p>
           <p className="flex items-center gap-3">
             <FaPhone className="text-[#58A6FF]" />
-            +94 76 123 4567
+            +94 70 142 2030
           </p>
           <div className="flex gap-6 mt-6">
-            <a href="https://github.com/sajanaworks" target="_blank" rel="noopener noreferrer" className="text-[#58A6FF] hover:text-[#F78166] text-xl">
+            <a href="https://github.com/SajanaWickramarathna" target="_blank" rel="noopener noreferrer" className="text-[#58A6FF] hover:text-[#F78166] text-xl">
               <FaGithub />
             </a>
-            <a href="https://linkedin.com/in/sajanawickramarathna" target="_blank" rel="noopener noreferrer" className="text-[#58A6FF] hover:text-[#F78166] text-xl">
+            <a href="https://www.linkedin.com/in/sajana-wickramarathna-a4b4062b6/" target="_blank" rel="noopener noreferrer" className="text-[#58A6FF] hover:text-[#F78166] text-xl">
               <FaLinkedin />
             </a>
           </div>

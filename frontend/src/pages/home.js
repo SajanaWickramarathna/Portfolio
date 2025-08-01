@@ -3,29 +3,29 @@ import { motion } from "framer-motion";
 import {
   FaGithub,
   FaLinkedin,
-  FaTwitter,
   FaInstagram,
   FaEnvelope,
   FaWhatsapp,
 } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import Footer from "../components/footer";
 
 import saj from "../assets/saj.jpg";
 import { useNavigate } from "react-router-dom";
 
 const socialLinks = [
-  { icon: <FaGithub size={22} />, url: "https://github.com/yourusername" },
+  { icon: <FaGithub size={22} />, url: "https://github.com/SajanaWickramarathna" },
   {
     icon: <FaLinkedin size={22} />,
-    url: "https://linkedin.com/in/yourusername",
+    url: "https://www.linkedin.com/in/sajana-wickramarathna-a4b4062b6/",
   },
-  { icon: <FaTwitter size={22} />, url: "https://twitter.com/yourusername" },
+  { icon: <FaXTwitter  size={22} />, url: "https://x.com/SajanaAnupama" },
   {
     icon: <FaInstagram size={22} />,
-    url: "https://instagram.com/yourusername",
+    url: "https://www.instagram.com/saajjj.__/",
   },
-  { icon: <FaWhatsapp size={22} />, url: "https://wa.me/yourphonenumber" },
-  { icon: <FaEnvelope size={22} />, url: "mailto:your.email@example.com" },
+  { icon: <FaWhatsapp size={22} />, url: "https://wa.me/+94701422030" },
+  { icon: <FaEnvelope size={22} />, url: "mailto:sajanawickramarathna143@gmail.com" },
 ];
 
 const Hero = () => {
