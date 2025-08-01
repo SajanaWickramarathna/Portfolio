@@ -1,10 +1,24 @@
 import React from "react";
-import { SiMongodb, SiExpress, SiReact, SiNodedotjs, SiTailwindcss } from "react-icons/si";
+import {
+  SiMongodb,
+  SiExpress,
+  SiReact,
+  SiNodedotjs,
+  SiTailwindcss,
+} from "react-icons/si";
 import { motion } from "framer-motion";
 import Footer from "../components/footer";
-import khb from "../assets/saj.jpg"; 
+import CS from "../assets/csDrop.png";
 
-const ProjectHero = () => {
+const techs = [
+  { label: "MongoDB", icon: <SiMongodb className="text-green-500" /> },
+  { label: "Express.js", icon: <SiExpress className="text-gray-300" /> },
+  { label: "React", icon: <SiReact className="text-blue-400" /> },
+  { label: "Node.js", icon: <SiNodedotjs className="text-green-400" /> },
+  { label: "Tailwind CSS", icon: <SiTailwindcss className="text-teal-400" /> },
+];
+
+const CleanWaveSys = () => {
   return (
     <div className="relative min-h-screen font-inter overflow-hidden text-white">
       {/* Background animation */}
@@ -20,81 +34,78 @@ const ProjectHero = () => {
           ease: "easeInOut",
         }}
       />
-
-      {/* Overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#0D1117]/90 to-[#161B22]/95" />
 
-      {/* Content Section */}
-      <section className="relative z-10 flex items-center justify-center min-h-screen px-6 py-20 mt-10">
-        <div className="container mx-auto max-w-6xl">
-          <motion.h2
-            className="text-4xl md:text-5xl font-bold text-center mb-10 text-[#58A6FF]"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+      {/* Main Content */}
+      <section
+        id="CleanWave"
+        className="relative z-10 flex items-center justify-center min-h-screen px-6 py-20 mt-10"
+      >
+        <div className="w-full max-w-7xl grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+          {/* Text Content */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            className="text-center md:text-left"
           >
-            KHB Associates
-          </motion.h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-[#58A6FF] mb-3">
+              CS Drop
+            </h2>
+            <p className="text-[#C9D1D9] text-sm md:text-base mb-4 max-w-md mx-auto md:mx-0">
+              A modern MERN stack application built as a Online Shopping platform. 
+              This project features a responsive interface, product catalog, order management, 
+              and real-time data interaction to streamline sales and customer engagement.
+            </p>
 
-          <motion.p
-            className="text-center text-lg md:text-xl text-[#C9D1D9] max-w-3xl mx-auto mb-12 leading-relaxed"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            KHB Associates is a custom corporate website focused on building trust through professional aesthetics and modern design. It includes sections for services, client testimonials, and a contact form.
-          </motion.p>
+            <ul className="text-[#8B949E] text-sm mb-4 list-disc list-inside space-y-1 max-w-md mx-auto md:mx-0">
+              <li>Full-stack MERN architecture (MongoDB, Express, React, Node.js)</li>
+              <li>Dynamic product catalog and search functionality</li>
+              <li>User authentication and order management</li>
+              <li>Responsive UI with Tailwind CSS</li>
+            </ul>
 
-          <div className="flex flex-col md:flex-row gap-10 items-center">
-            {/* Image */}
-            <motion.div
-              whileHover={{ scale: 1.02 }}
-              className="w-full md:w-[55%] lg:w-[50%] xl:w-[45%] max-h-[300px] rounded-xl overflow-hidden shadow-md border border-[#21262D] transform scale-95"
-
-            >
-              <img
-                src={khb}
-                alt="KHB Associates"
-                className="w-full h-full object-cover rounded-xl"
-              />
-            </motion.div>
-
-            {/* Tech Stack + Button */}
-            <div className="w-full md:w-1/3 text-center md:text-left">
-              <h3 className="text-2xl font-semibold text-[#C9D1D9] mb-6">
-                Tech Stack:
-              </h3>
-              <div className="flex flex-wrap gap-3 justify-center md:justify-start">
-                {[
-                  { icon: <SiMongodb className="text-green-500" />, label: "MongoDB" },
-                  { icon: <SiExpress className="text-gray-300" />, label: "Express.js" },
-                  { icon: <SiReact className="text-blue-400" />, label: "React" },
-                  { icon: <SiNodedotjs className="text-green-400" />, label: "Node.js" },
-                  { icon: <SiTailwindcss className="text-teal-400" />, label: "Tailwind CSS" },
-                ].map((tech, i) => (
-                  <span
-                    key={i}
-                    className="bg-[#21262D] hover:shadow-[#58A6FF]/30 shadow-sm text-sm px-4 py-2 rounded-full flex items-center gap-2 transition duration-300"
-                  >
-                    {tech.icon} {tech.label}
-                  </span>
-                ))}
-              </div>
-
-              {/* CTA Button */}
-              <motion.a
-                whileHover={{ scale: 1.05 }}
-                href="https://github.com/your-link" // Replace with actual repo
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block mt-10 px-6 py-3 rounded-full text-[#0D1117] bg-[#58A6FF] font-semibold hover:bg-[#1f6feb] transition-all duration-300"
-              >
-                Source Code
-              </motion.a>
+            <h3 className="text-base font-semibold text-white mb-2">
+              Tech Stack:
+            </h3>
+            <div className="flex flex-wrap justify-center md:justify-start gap-2 mb-8 mt-4">
+              {techs.map((tech, i) => (
+                <motion.span
+                  key={i}
+                  whileHover={{ scale: 1.1, backgroundColor: "#21262D" }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                  className="flex items-center gap-1 px-3 py-1 text-xs bg-[#161B22] border border-white/10 rounded-full shadow cursor-pointer"
+                >
+                  {tech.icon}
+                  {tech.label}
+                </motion.span>
+              ))}
             </div>
-          </div>
+
+            <motion.a
+              href="https://github.com/SajanaWickramarathna/CleanWave"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.05 }}
+              className="bg-gradient-to-r from-[#F78166] to-[#FF9E7D] hover:from-[#FF9E7D] hover:to-[#F78166] text-[#0D1117] font-bold px-6 py-3 rounded-full shadow-md"
+            >
+              View Source Code
+            </motion.a>
+          </motion.div>
+
+          {/* Image */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            className="flex justify-center"
+          >
+            <img
+              src={CS}
+              alt="csdrop"
+              className="w-full max-w-xl h-3/4 rounded-2xl shadow-lg border border-white/10 object-cover h-[250px]"
+            />
+          </motion.div>
         </div>
       </section>
 
@@ -103,4 +114,4 @@ const ProjectHero = () => {
   );
 };
 
-export default ProjectHero;
+export default CleanWaveSys;

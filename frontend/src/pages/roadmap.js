@@ -2,10 +2,10 @@ import React from "react";
 import { motion } from "framer-motion";
 import {
   FaHtml5, FaCss3Alt, FaJs, FaReact,
-  FaNodeJs, FaDocker, FaPython,FaJava, 
+  FaNodeJs,  FaPython,FaJava, 
 } from "react-icons/fa";
 import {
-  SiPhp, SiMongodb, SiExpress, SiGraphql,
+  SiPhp, SiMongodb, SiExpress, 
   SiNextdotjs, SiTailwindcss, SiMysql, SiC , SiKotlin, SiFlutter,SiPostgresql ,
 } from "react-icons/si";
 import { MdOutlineDesignServices } from "react-icons/md";
