@@ -20,6 +20,8 @@ import Finora from './Projects/finora.js';
 import EWWYK from './Projects/earnwithwhatyouknow.js';
 import CSDrop from './Projects/csdrop.js';
 import ScrollToTop from './components/ScrollToTop .js'
+import Lost2Found from './Projects/lost2Found.js';
+import SPARK from './Projects/SPARK.js';
 
 
 function App() {
@@ -42,6 +44,8 @@ function App() {
         <Route path="/finora" element={<Finora />} />
         <Route path="/ewwyk" element={<EWWYK />} />
         <Route path="/csdrop" element={<CSDrop />} />
+        <Route path="/lost2Found" element={<Lost2Found />} />
+        <Route path="/spark" element={<SPARK />} />
 
       </Routes>
       

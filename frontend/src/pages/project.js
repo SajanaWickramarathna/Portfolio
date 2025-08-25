@@ -59,6 +59,20 @@ const projects = [
     image: "",
     link: "/ewwyk",
   },
+  {
+    title: "lost2Found",
+    description:
+      "Platform where users can find their lost items.",
+    image: "",
+    link: "/l2f",
+  },
+  {
+    title: "SPARK",
+    description:
+      "A volunteer management system for NGOs to organize and track volunteer activities.",
+    image: "",
+    link: "/spark",
+  },
 ];
 
 const Projects = () => {
