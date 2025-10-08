@@ -5,9 +5,11 @@ import {
   SiReact,
   SiNodedotjs,
   SiTailwindcss,
+  SiVite,
 } from "react-icons/si";
 import { motion } from "framer-motion";
 import Footer from "../components/footer";
+import Spark from "../assets/spark.png";
 
 
 const techs = [
@@ -16,6 +18,7 @@ const techs = [
   { label: "React", icon: <SiReact className="text-blue-400" /> },
   { label: "Node.js", icon: <SiNodedotjs className="text-green-400" /> },
   { label: "Tailwind CSS", icon: <SiTailwindcss className="text-teal-400" /> },
+  { label: "Vite", icon: <SiVite className="text-purple-400" /> },
 ];
 
 const CleanWaveSys = () => {
@@ -53,7 +56,7 @@ const CleanWaveSys = () => {
               SPARK
             </h2>
             <p className="text-[#C9D1D9] text-sm md:text-base mb-4 max-w-md mx-auto md:mx-0">
-              under dev
+              volunteer management system for NGOs to organize and track volunteer activities and engagement.
             </p>
 
             <ul className="text-[#8B949E] text-sm mb-4 list-disc list-inside space-y-1 max-w-md mx-auto md:mx-0">
@@ -79,7 +82,7 @@ const CleanWaveSys = () => {
             </div>
 
             <motion.a
-              href="https://github.com/SajanaWickramarathna/Earn-With-What-You-Know"
+              href="https://github.com/Seneth-Jayashan/Spark"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
@@ -97,7 +100,7 @@ const CleanWaveSys = () => {
             className="flex justify-center"
           >
             <img
-              src={""}
+              src={Spark}
               alt="EWWYK"
               className="w-full max-w-xl h-3/4 rounded-2xl shadow-lg border border-white/10 object-cover h-[250px]"
             />

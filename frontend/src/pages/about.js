@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-
 import { useNavigate } from "react-router-dom";
 import Footer from '../components/footer';
 const Cv = "/CV.pdf";
@@ -44,18 +43,23 @@ const About = () => {
           </motion.h2>
 
           <motion.p
-            className="text-lg md:text-xl text-[#C9D1D9] leading-relaxed max-w-3xl mx-auto"
+            className="text-lg md:text-xl text-[#C9D1D9]/90 leading-relaxed max-w-3xl mx-auto mb-6"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}
             viewport={{ once: true }}
           >
-            I’m Sajana Wickramarathna, 
+            Hi, I'm <span className="text-[#F78166] font-semibold">Sajana Wickramarathna</span>, 
+            an undergraduate BSc IT student specializing in Software Engineering at SLIIT, Sri Lanka. 
+            I'm a Full Stack Developer and UI/UX enthusiast, building performant and engaging applications 
+            with the <span className="text-[#58A6FF] font-medium">MERN stack</span> and other modern technologies. 
+            I also work with <span className="text-[#58A6FF] font-medium">JavaScript, TailwindCSS, PHP, Python, MySQL, Oracle, Kotlin, Java</span>, and enjoy designing intuitive interfaces in <span className="text-[#58A6FF] font-medium">Figma</span>. 
+            I love collaborating in teams, tackling challenging projects, and continuously growing as a tech professional.
           </motion.p>
 
           {/* CTA Buttons */}
           <motion.div
-            className="mt-10 flex justify-center gap-4 flex-wrap"
+            className="mt-8 flex justify-center gap-4 flex-wrap"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.6 }}
@@ -65,7 +69,7 @@ const About = () => {
               onClick={() => navigate("/projects")}
               className="bg-gradient-to-r from-[#F78166] to-[#FF9E7D] hover:from-[#FF9E7D] hover:to-[#F78166] text-[#0D1117] font-semibold px-6 py-3 rounded-full shadow-md transition-all duration-300"
             >
-              View Projects
+              See My Work
             </button>
             <a
               href={Cv}
@@ -76,7 +80,6 @@ const About = () => {
             </a>
           </motion.div>
         </div>
-        
       </section>
       <Footer />
     </div>

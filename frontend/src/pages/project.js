@@ -7,6 +7,7 @@ import Cleanwave from "../assets/cleanWave.png";
 import csDrop from "../assets/csDrop.png";
 import Finora from "../assets/finora.png";
 import Pcify from "../assets/pcify.png"
+import Spark from "../assets/spark.png";
 import Footer from "../components/footer";
 
 const projects = [
@@ -70,7 +71,7 @@ const projects = [
     title: "SPARK",
     description:
       "A volunteer management system for NGOs to organize and track volunteer activities.",
-    image: "",
+    image: Spark,
     link: "/spark",
   },
 ];
