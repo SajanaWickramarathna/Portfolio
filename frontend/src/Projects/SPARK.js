@@ -56,11 +56,17 @@ const CleanWaveSys = () => {
               SPARK
             </h2>
             <p className="text-[#C9D1D9] text-sm md:text-base mb-4 max-w-md mx-auto md:mx-0">
-              volunteer management system for NGOs to organize and track volunteer activities and engagement.
+              A mordern MERN stack web application designed as a volunteer, volunteer organization, and volunteer event management system.
+              This project features user authentication, role-based access control, and a responsive design to ensure accessibility across devices.
+              This project devolped as a part of the 3rd year group project for the degree of BSc in Software Engineering at the University of SLIIT.
             </p>
 
             <ul className="text-[#8B949E] text-sm mb-4 list-disc list-inside space-y-1 max-w-md mx-auto md:mx-0">
-              <li>Uunder dev</li>
+              <li>Full stack MERN architecture (MongoDB, Express, React, Node.js)</li>
+              <li>Event creation, management, and participation functionalities</li>
+              <li>User authentication and volunteer management features</li>
+              <li>Group Chat feature for volunteers and organizers</li>
+              <li>Responsive design with Tailwind CSS for optimal user experience</li>
               
             </ul>
 
