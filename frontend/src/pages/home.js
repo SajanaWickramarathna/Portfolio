@@ -10,7 +10,7 @@ import {
 import { FaXTwitter } from "react-icons/fa6";
 import Footer from "../components/footer";
 
-import saj from "../assets/saj.JPG";
+import saj from "../assets/saj.png";
 import { useNavigate } from "react-router-dom";
 
 const socialLinks = [
