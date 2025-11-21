@@ -88,7 +88,7 @@ const CleanWaveSys = () => {
             </div>
 
             <motion.a
-              href="https://github.com/Seneth-Jayashan/Spark"
+              href="https://github.com/SajanaWickramarathna/Spark"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}

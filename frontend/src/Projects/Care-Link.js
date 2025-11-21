@@ -9,7 +9,7 @@ import {
 } from "react-icons/si";
 import { motion } from "framer-motion";
 import Footer from "../components/footer";
-import RuralLink from "../assets/rurallink.jpg";
+//import Spark from "../assets/spark.png";
 
 
 const techs = [
@@ -53,21 +53,22 @@ const CleanWaveSys = () => {
             className="text-center md:text-left"
           >
             <h2 className="text-2xl md:text-3xl font-bold text-[#58A6FF] mb-3">
-              RuralLink
+              Care Link LK
             </h2>
             <p className="text-[#C9D1D9] text-sm md:text-base mb-4 max-w-md mx-auto md:mx-0">
-              Rural-Link is an app designed to streamline last-mile delivery for rural entrepreneurs. 
-              It helps reduce costs and logistical challenges 
-              by optimizing order handling, routing, and coordination 
-              between rural producers and customers or distribution hubs.
+          Care Link LK is a JavaScript-based web app that helps clinics, caregivers,
+           and patients manage healthcare tasks in Sri Lanka. It supports appointment 
+           scheduling, patient records, role-based access, notifications, and caregiver–patient
+            messaging, all in a responsive interface. The project is almost fully JavaScript, 
+            making it easy to extend with local services and multilingual support.
             </p>
 
             <ul className="text-[#8B949E] text-sm mb-4 list-disc list-inside space-y-1 max-w-md mx-auto md:mx-0">
-              <li>Goal setting with progress visualization</li>
-              <li>Interactive analytics dashboard (spending, income trends, category breakdown)</li> 
-              <li>Secure cloud backup & cross-device sync</li> 
-              <li>Multi-currency and localization support</li> 
-              <li>Exportable financial reports (PDF / Excel) with filter options</li>
+                <li>Role-Based Access Control: Different access levels for patients, caregivers, and admins.</li>
+                <li>Appointment Scheduling: Book, view, and manage medical appointments.</li>
+                <li>Patient Records: Secure storage and retrieval of patient health information.</li>
+                <li>Notifications: Email and SMS reminders for appointments and updates.</li>
+                <li>QR code for login and retrieval of patient history</li>
             </ul>
 
             <h3 className="text-base font-semibold text-white mb-2">
@@ -88,7 +89,7 @@ const CleanWaveSys = () => {
             </div>
 
             <motion.a
-              href="https://github.com/SajanaWickramarathna/Rural-Link"
+              href="https://github.com/Seneth-Jayashan/Spark"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
@@ -106,8 +107,8 @@ const CleanWaveSys = () => {
             className="flex justify-center"
           >
             <img
-              src={RuralLink}
-              alt="RuralLink"
+              //src={Spark}
+              alt="Care-Link-LK"
               className="w-full max-w-xl h-3/4 rounded-2xl shadow-lg border border-white/10 object-cover h-[250px]"
             />
           </motion.div>

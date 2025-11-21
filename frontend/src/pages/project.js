@@ -78,9 +78,16 @@ const projects = [
   {
     title: "Rural Link",
     description:
-      "Mobile app using web view to connect rural communities with moredern online markets, and conect them to buyers and suppliers. and provide delivery services.",
+      "An app designed to streamline last-mile delivery for rural entrepreneurs.",
     image: RuralLink,
     link: "/rurallink",
+  },
+  {
+    title: "Care-Link-LK",
+    description:
+      "A healthcare web application connecting patients with medical professionals for consultations and appointments.",
+    image: "",
+    link: "/carelink",
   },
 ];
 
