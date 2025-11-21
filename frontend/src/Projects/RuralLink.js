@@ -1,21 +1,24 @@
-import { SiKotlin, SiFirebase } from "react-icons/si";
-import { RiFileCodeLine } from "react-icons/ri";
-import { MdSettings } from "react-icons/md";
+import React from "react";
+import {
+  SiMongodb,
+  SiExpress,
+  SiReact,
+  SiNodedotjs,
+  SiTailwindcss,
+  SiVite,
+} from "react-icons/si";
 import { motion } from "framer-motion";
 import Footer from "../components/footer";
-import Finora from "../assets/finora.png";
+import RuralLink from "../assets/rurallink.jpg";
+
 
 const techs = [
-  { label: "Kotlin", icon: <SiKotlin className="text-purple-600" /> },
-  {
-    label: "XML Layouts",
-    icon: <RiFileCodeLine className="text-yellow-500" />,
-  },
-  {
-    label: "Shared Preferences",
-    icon: <MdSettings className="text-blue-500" />,
-  },
-  { label: "Firebase", icon: <SiFirebase className="text-orange-400" /> },
+  { label: "MongoDB", icon: <SiMongodb className="text-green-500" /> },
+  { label: "Express.js", icon: <SiExpress className="text-gray-300" /> },
+  { label: "React", icon: <SiReact className="text-blue-400" /> },
+  { label: "Node.js", icon: <SiNodedotjs className="text-green-400" /> },
+  { label: "Tailwind CSS", icon: <SiTailwindcss className="text-teal-400" /> },
+  { label: "Vite", icon: <SiVite className="text-purple-400" /> },
 ];
 
 const CleanWaveSys = () => {
@@ -50,20 +53,21 @@ const CleanWaveSys = () => {
             className="text-center md:text-left"
           >
             <h2 className="text-2xl md:text-3xl font-bold text-[#58A6FF] mb-3">
-              Finora
+              RuralLink
             </h2>
             <p className="text-[#C9D1D9] text-sm md:text-base mb-4 max-w-md mx-auto md:mx-0">
-              Finora is an Android app developed with Kotlin, utilizing Shared
-              Preferences for user login and data storage. It helps users track
-              their budget, add income and outgoing transactions, and receive
-              timely notifications.
+              Rural-Link is an app designed to streamline last-mile delivery for rural entrepreneurs. 
+              It helps reduce costs and logistical challenges 
+              by optimizing order handling, routing, and coordination 
+              between rural producers and customers or distribution hubs.
             </p>
 
             <ul className="text-[#8B949E] text-sm mb-4 list-disc list-inside space-y-1 max-w-md mx-auto md:mx-0">
-              <li>User authentication with Shared Preferences</li>
-              <li>Budget tracking and management</li>
-              <li>Add and categorize income & outgoing transactions</li>
-              <li>Push notifications for important updates</li>
+              <li>Goal setting with progress visualization</li>
+              <li>Interactive analytics dashboard (spending, income trends, category breakdown)</li> 
+              <li>Secure cloud backup & cross-device sync</li> 
+              <li>Multi-currency and localization support</li> 
+              <li>Exportable financial reports (PDF / Excel) with filter options</li>
             </ul>
 
             <h3 className="text-base font-semibold text-white mb-2">
@@ -102,8 +106,8 @@ const CleanWaveSys = () => {
             className="flex justify-center"
           >
             <img
-              src={Finora}
-              alt="Finora"
+              src={RuralLink}
+              alt="RuralLink"
               className="w-full max-w-xl h-3/4 rounded-2xl shadow-lg border border-white/10 object-cover h-[250px]"
             />
           </motion.div>
