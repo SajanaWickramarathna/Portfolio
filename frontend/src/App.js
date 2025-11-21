@@ -22,6 +22,7 @@ import CSDrop from './Projects/csdrop.js';
 import ScrollToTop from './components/ScrollToTop .js'
 import Lost2Found from './Projects/lost2Found.js';
 import SPARK from './Projects/SPARK.js';
+import RuralLink from './Projects/RuralLink.js';
 
 
 function App() {
@@ -46,6 +47,7 @@ function App() {
         <Route path="/csdrop" element={<CSDrop />} />
         <Route path="/lost2Found" element={<Lost2Found />} />
         <Route path="/spark" element={<SPARK />} />
+        <Route path="/rurallink" element={<RuralLink />} />
 
       </Routes>
       

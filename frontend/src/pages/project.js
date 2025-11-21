@@ -8,6 +8,7 @@ import csDrop from "../assets/csDrop.png";
 import Finora from "../assets/finora.png";
 import Pcify from "../assets/pcify.png"
 import Spark from "../assets/spark.png";
+import RuralLink from "../assets/rurallink.jpg";
 import Footer from "../components/footer";
 
 const projects = [
@@ -73,6 +74,13 @@ const projects = [
       "A volunteer management system for NGOs to organize and track volunteer activities.",
     image: Spark,
     link: "/spark",
+  },
+  {
+    title: "Rural Link",
+    description:
+      "Mobile app using web view to connect rural communities with moredern online markets, and conect them to buyers and suppliers. and provide delivery services.",
+    image: RuralLink,
+    link: "/rurallink",
   },
 ];
 
