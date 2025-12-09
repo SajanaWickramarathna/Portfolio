@@ -6,6 +6,7 @@ import {
   FaInstagram,
   FaEnvelope,
   FaWhatsapp,
+  FaFacebook,
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import Footer from "../components/footer";
@@ -26,6 +27,7 @@ const socialLinks = [
   },
   { icon: <FaWhatsapp size={22} />, url: "https://wa.me/+94701422030" },
   { icon: <FaEnvelope size={22} />, url: "mailto:sajanawickramarathna143@gmail.com" },
+  { icon: <FaFacebook size={22} />, url: "https://www.facebook.com/share/1Ha2ghwJsY/?mibextid=wwXIfr" },
 ];
 
 const Hero = () => {
