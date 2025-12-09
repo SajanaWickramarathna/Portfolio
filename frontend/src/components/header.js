@@ -19,7 +19,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-6 left-1/2 transform -translate-x-1/2 z-50 w-[95%] max-w-7xl px-8 py-4 bg-[#0D1117]/70 backdrop-blur-lg rounded-2xl border border-[#30363D] shadow-xl">
+    <header className="fixed top-4 sm:top-6 left-1/2 transform -translate-x-1/2 z-50 w-[95%] max-w-7xl px-4 sm:px-8 py-3 sm:py-4 bg-[#0D1117]/70 backdrop-blur-lg rounded-2xl border border-[#30363D] shadow-xl">
       <div className="flex justify-between items-center w-full">
         {/* Logo */}
         <motion.div
@@ -29,7 +29,7 @@ const Header = () => {
         >
           <div className="p-[3px] rounded-full bg-gradient-to-br from-[#58A6FF] to-[#F78166]">
             <div className="bg-[#0D1117] p-[6px] rounded-full border border-[#30363D]">
-              <img src={logo} alt="Logo" className="w-10 h-10 rounded-full object-cover" />
+              <img src={logo} alt="Logo" loading="lazy" className="w-10 h-10 rounded-full object-cover" />
             </div>
           </div>
           <span className="text-[#C9D1D9] font-bold tracking-wide text-lg hidden sm:block">
@@ -78,12 +78,13 @@ const Header = () => {
 
         {/* Mobile Toggle */}
         <motion.button
-          className="md:hidden text-2xl text-[#58A6FF]"
+          className="md:hidden text-2xl text-[#58A6FF] p-2"
           onClick={() => setIsMobileOpen(!isMobileOpen)}
           aria-label="Toggle Menu"
+          aria-expanded={isMobileOpen}
           animate={{
             rotate: isMobileOpen ? 90 : 0,
-            scale: isMobileOpen ? 1.2 : 1,
+            scale: isMobileOpen ? 1.1 : 1,
           }}
           transition={{ type: "spring", stiffness: 300, damping: 20 }}
         >

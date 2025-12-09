@@ -82,12 +82,12 @@ const Articles = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-12 mt-8"
+            className="text-center mb-8 sm:mb-12 mt-14 sm:mt-8 px-2"
           >
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 sm:mb-4 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
               My Articles & Projects
             </h1>
-            <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+            <p className="text-gray-300 text-base sm:text-lg max-w-2xl mx-auto">
               Explore my latest articles on Medium and design projects on
               Behance
             </p>
@@ -98,7 +98,7 @@ const Articles = () => {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="flex justify-center gap-3 sm:gap-4 mb-12 flex-wrap"
+            className="flex justify-center gap-2 sm:gap-3 md:gap-4 mb-8 sm:mb-12 flex-wrap px-2"
           >
             {[
               { id: "all", label: "All", icon: "📚" },
@@ -114,7 +114,7 @@ const Articles = () => {
                 onClick={() => setActiveTab(tab.id)}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className={`px-6 py-3 rounded-lg font-semibold flex items-center gap-2 transition-all ${
+                className={`px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-semibold flex items-center gap-2 transition-all text-sm sm:text-base ${
                   activeTab === tab.id
                     ? "bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-lg"
                     : "bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700"
@@ -129,7 +129,7 @@ const Articles = () => {
           {/* Articles Grid */}
           <motion.div
             layout
-            className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8"
+            className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 px-2 sm:px-0"
           >
             {filteredArticles.map((article, index) => (
               <motion.div
@@ -146,9 +146,9 @@ const Articles = () => {
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500/0 to-purple-500/0 group-hover:from-blue-500/10 group-hover:to-purple-500/10 transition-all duration-300" />
 
                 {/* Content */}
-                <div className="relative p-6 h-full flex flex-col">
+                <div className="relative p-4 sm:p-6 h-full flex flex-col">
                   {/* Header */}
-                  <div className="flex items-start justify-between mb-4">
+                  <div className="flex items-start justify-between mb-3 sm:mb-4">
                     <div className="text-4xl mb-3">{article.image}</div>
                     <span className="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-xs font-semibold flex items-center gap-1 border border-blue-500/30">
                       {article.platform === "medium" ? (
@@ -161,17 +161,17 @@ const Articles = () => {
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-xl font-bold mb-3 text-white group-hover:text-blue-400 transition-colors line-clamp-2">
+                  <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-white group-hover:text-blue-400 transition-colors line-clamp-2">
                     {article.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="text-gray-400 text-sm mb-4 flex-grow line-clamp-3">
+                  <p className="text-gray-400 text-xs sm:text-sm mb-3 sm:mb-4 flex-grow line-clamp-3">
                     {article.description}
                   </p>
 
                   {/* Meta Info */}
-                  <div className="flex flex-wrap gap-3 text-xs text-gray-400 mb-4 pb-4 border-b border-gray-700/50">
+                  <div className="flex flex-wrap gap-2 sm:gap-3 text-xs text-gray-400 mb-3 sm:mb-4 pb-3 sm:pb-4 border-b border-gray-700/50">
                     <span>{article.date}</span>
                     {article.readTime && <span>• {article.readTime}</span>}
                   </div>
@@ -182,7 +182,7 @@ const Articles = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     whileHover={{ x: 5 }}
-                    className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold hover:shadow-lg transition-all w-full justify-center"
+                    className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold hover:shadow-lg transition-all w-full justify-center text-sm sm:text-base"
                   >
                     Read More
                     <FaExternalLinkAlt size={14} />
@@ -211,22 +211,23 @@ const Articles = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="mt-16 text-center"
+            className="mt-12 sm:mt-16 text-center px-2"
           >
-            <p className="text-gray-300 mb-6">
+            <p className="text-gray-300 mb-4 sm:mb-6 text-sm sm:text-base">
               Connect with me on my platforms
             </p>
-            <div className="flex justify-center gap-4">
+            <div className="flex justify-center gap-3 sm:gap-4 flex-wrap">
               <motion.a
                 href="https://medium.com/@sajanawickramarathna143"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
-                className="p-4 bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-700 rounded-lg hover:border-blue-500/50 transition-all flex items-center gap-2 text-gray-300 hover:text-blue-400"
+                className="p-3 sm:p-4 bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-700 rounded-lg hover:border-blue-500/50 transition-all flex items-center gap-2 text-gray-300 hover:text-blue-400 text-sm sm:text-base"
               >
-                <FaMedium size={24} />
-                <span>Follow on Medium</span>
+                <FaMedium size={20} />
+                <span className="hidden sm:inline">Follow on Medium</span>
+                <span className="sm:hidden">Medium</span>
               </motion.a>
               <motion.a
                 href="https://www.behance.net/sajanawickram"
@@ -234,10 +235,11 @@ const Articles = () => {
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
-                className="p-4 bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-700 rounded-lg hover:border-purple-500/50 transition-all flex items-center gap-2 text-gray-300 hover:text-purple-400"
+                className="p-3 sm:p-4 bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-700 rounded-lg hover:border-purple-500/50 transition-all flex items-center gap-2 text-gray-300 hover:text-purple-400 text-sm sm:text-base"
               >
-                <SiBehance size={24} />
-                <span>Follow on Behance</span>
+                <SiBehance size={20} />
+                <span className="hidden sm:inline">Follow on Behance</span>
+                <span className="sm:hidden">Behance</span>
               </motion.a>
             </div>
           </motion.div>

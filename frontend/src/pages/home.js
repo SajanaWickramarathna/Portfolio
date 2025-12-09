@@ -148,6 +148,7 @@ const Hero = () => {
               <img
                 src={saj}
                 alt="Sajana Wickramarathna"
+                loading="lazy"
                 className="w-full h-full object-cover rounded-full relative z-10"
               />
             </div>
