@@ -3,7 +3,7 @@ import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#0D1117]/70 backdrop-blur-sm border-t border-[#30363D] text-[#C9D1D9] mt-16 px-6 py-8 transition-all duration-300">
+    <footer className="bg-white/[0.02] backdrop-blur-sm border-t border-white/10 text-[#C9D1D9] mt-16 px-6 py-8 transition-all duration-300 shadow-[0_-8px_32px_0_rgba(0,0,0,0.36)]">
       <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
         {/* Social Icons */}
         <div className="flex space-x-6">
