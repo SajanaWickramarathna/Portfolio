@@ -12,7 +12,7 @@ const MainPage = () => {
   return (
     <div className="relative min-h-screen text-white font-inter">
       {/* Content wrapper with z-index to appear above background */}
-      <div className="relative z-10 flex flex-col gap-24 py-10">
+      <div className="relative z-10 flex flex-col gap-0 py-0">
       <Home />
       <About />
       <Services />

@@ -73,7 +73,7 @@ const SkillTree = () => {
       {/* Content */}
       <section
         id="skills"
-        className="relative z-10 scroll-mt-28 md:scroll-mt-32 flex flex-col items-center justify-center  px-4 md:px-6 py-16 md:py-24 mt-6 md:mt-10"
+        className="relative z-10 scroll-mt-20 md:scroll-mt-24 flex flex-col items-center justify-center px-4 md:px-6 py-12 md:py-16"
       >
         <div className="w-full max-w-6xl mx-auto">
           <motion.div 

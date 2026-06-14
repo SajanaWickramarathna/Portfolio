@@ -174,7 +174,7 @@ const Hero = () => {
 
       {/* ── Main section ─────────────────────────────────────────────── */}
       <section
-        className="relative z-10 scroll-mt-28 md:scroll-mt-32 flex items-center justify-center  px-6 pt-36 pb-20 mt-8"
+        className="relative z-10 scroll-mt-20 md:scroll-mt-24 flex items-center justify-center  px-6 pt-28 pb-16"
         id="home"
       >
         <div className="container mx-auto max-w-7xl flex flex-col lg:flex-row items-center justify-between gap-16">
