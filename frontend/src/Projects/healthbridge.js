@@ -1,20 +1,26 @@
 import React from "react";
 import {
-  SiMysql,
-  SiCss3
+  SiKubernetes,
+  SiDocker,
+  SiReact,
+  SiNodedotjs,
+  SiExpress,
+  SiMongodb
 } from "react-icons/si";
-import { FaJava } from "react-icons/fa";
 import { motion } from "framer-motion";
 import Footer from "../components/footer";
 
 const techs = [
-  { label: "Java (Servlets)", icon: <FaJava className="text-red-500" /> },
-  { label: "MySQL", icon: <SiMysql className="text-blue-600" /> },
-  { label: "CSS", icon: <SiCss3 className="text-blue-500" /> },
+  { label: "MongoDB", icon: <SiMongodb className="text-green-500" /> },
+  { label: "Express.js", icon: <SiExpress className="text-gray-300" /> },
+  { label: "React", icon: <SiReact className="text-blue-400" /> },
+  { label: "Node.js", icon: <SiNodedotjs className="text-green-400" /> },
+  { label: "Docker", icon: <SiDocker className="text-blue-500" /> },
+  { label: "Kubernetes", icon: <SiKubernetes className="text-blue-600" /> },
 
 ];
 
-const Cleanwave = () => {
+const Healthbridge = () => {
   return (
     <div className="relative min-h-screen font-inter overflow-hidden text-white">
       {/* Background animation */}
@@ -52,11 +58,11 @@ const Cleanwave = () => {
               </motion.div>
 
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white to-[#8B949E] mb-6 tracking-tight">
-                Clean wave
+                HealthBridge
               </h2>
               
               <p className="text-[#C9D1D9] text-base md:text-lg mb-12 max-w-3xl leading-relaxed font-light">
-                CleanWave Laundry System is a Java-based web application for managing laundry orders and invoices, featuring role-based dashboards, real-time tracking, and an MVC architecture.
+                Worked as part of a development team to build a scalable telemedicine platform featuring online consultations, appointment management, secure payments, and AI-assisted healthcare services. Responsible for implementing the video consultation and prescription management modules.
               </p>
 
               
@@ -65,9 +71,9 @@ const Cleanwave = () => {
                    <span className="w-2 h-2 rounded-full bg-[#58A6FF]"></span> Key Highlights
                 </h3>
                 <ul className="text-[#8B949E] text-sm md:text-base space-y-4">
-                  <li className="flex items-start gap-3 text-left"><span className="text-[#58A6FF] mt-1">✦</span><span>Role-based dashboards</span></li>
-<li className="flex items-start gap-3 text-left"><span className="text-[#58A6FF] mt-1">✦</span><span>Real-time tracking</span></li>
-<li className="flex items-start gap-3 text-left"><span className="text-[#58A6FF] mt-1">✦</span><span>MVC architecture</span></li>
+                  <li className="flex items-start gap-3 text-left"><span className="text-[#58A6FF] mt-1">✦</span><span>Developed Real-Time Video Consultation Module</span></li>
+<li className="flex items-start gap-3 text-left"><span className="text-[#58A6FF] mt-1">✦</span><span>Developed Digital Prescription Management System</span></li>
+<li className="flex items-start gap-3 text-left"><span className="text-[#58A6FF] mt-1">✦</span><span>Docker & Kubernetes for Containerized Deployment</span></li>
 
                 </ul>
               </div>
@@ -93,7 +99,7 @@ const Cleanwave = () => {
               </div>
 
               <motion.a
-                href="https://github.com/Seneth-Jayashan/CleanWave"
+                href="https://github.com/Seneth-Jayashan/HealthBridge"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
@@ -113,4 +119,4 @@ const Cleanwave = () => {
   );
 };
 
-export default Cleanwave;
+export default Healthbridge;

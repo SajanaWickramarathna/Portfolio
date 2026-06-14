@@ -1,20 +1,22 @@
 import React from "react";
 import {
-  SiMysql,
-  SiCss3
+  SiNodedotjs,
+  SiReact,
+  SiExpress,
+  SiMongodb
 } from "react-icons/si";
-import { FaJava } from "react-icons/fa";
 import { motion } from "framer-motion";
 import Footer from "../components/footer";
 
 const techs = [
-  { label: "Java (Servlets)", icon: <FaJava className="text-red-500" /> },
-  { label: "MySQL", icon: <SiMysql className="text-blue-600" /> },
-  { label: "CSS", icon: <SiCss3 className="text-blue-500" /> },
+  { label: "MongoDB", icon: <SiMongodb className="text-green-500" /> },
+  { label: "Express.js", icon: <SiExpress className="text-gray-300" /> },
+  { label: "React", icon: <SiReact className="text-blue-400" /> },
+  { label: "Node.js", icon: <SiNodedotjs className="text-green-400" /> },
 
 ];
 
-const Cleanwave = () => {
+const Learnbridge = () => {
   return (
     <div className="relative min-h-screen font-inter overflow-hidden text-white">
       {/* Background animation */}
@@ -52,11 +54,11 @@ const Cleanwave = () => {
               </motion.div>
 
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white to-[#8B949E] mb-6 tracking-tight">
-                Clean wave
+                Learn Bridge
               </h2>
               
               <p className="text-[#C9D1D9] text-base md:text-lg mb-12 max-w-3xl leading-relaxed font-light">
-                CleanWave Laundry System is a Java-based web application for managing laundry orders and invoices, featuring role-based dashboards, real-time tracking, and an MVC architecture.
+                Worked in a team to develop a full-stack learning management platform that enables students to access educational content, attend virtual classes, and utilize knowledge resources through a centralized web application.
               </p>
 
               
@@ -65,9 +67,11 @@ const Cleanwave = () => {
                    <span className="w-2 h-2 rounded-full bg-[#58A6FF]"></span> Key Highlights
                 </h3>
                 <ul className="text-[#8B949E] text-sm md:text-base space-y-4">
-                  <li className="flex items-start gap-3 text-left"><span className="text-[#58A6FF] mt-1">✦</span><span>Role-based dashboards</span></li>
-<li className="flex items-start gap-3 text-left"><span className="text-[#58A6FF] mt-1">✦</span><span>Real-time tracking</span></li>
-<li className="flex items-start gap-3 text-left"><span className="text-[#58A6FF] mt-1">✦</span><span>MVC architecture</span></li>
+                  <li className="flex items-start gap-3 text-left"><span className="text-[#58A6FF] mt-1">✦</span><span>Course, Lesson, and Subject Management</span></li>
+<li className="flex items-start gap-3 text-left"><span className="text-[#58A6FF] mt-1">✦</span><span>Zoom Integration for Virtual Learning Sessions</span></li>
+<li className="flex items-start gap-3 text-left"><span className="text-[#58A6FF] mt-1">✦</span><span>Cloudinary Integration for File and Media Handling</span></li>
+<li className="flex items-start gap-3 text-left"><span className="text-[#58A6FF] mt-1">✦</span><span>Knowledge Base Management System</span></li>
+<li className="flex items-start gap-3 text-left"><span className="text-[#58A6FF] mt-1">✦</span><span>REST API Development & Database Design</span></li>
 
                 </ul>
               </div>
@@ -93,7 +97,7 @@ const Cleanwave = () => {
               </div>
 
               <motion.a
-                href="https://github.com/Seneth-Jayashan/CleanWave"
+                href="https://github.com/Seneth-Jayashan/LearnBridge"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
@@ -113,4 +117,4 @@ const Cleanwave = () => {
   );
 };
 
-export default Cleanwave;
+export default Learnbridge;

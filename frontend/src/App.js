@@ -1,7 +1,5 @@
-
 import './App.css';
 import { Route, Routes } from "react-router-dom";
-
 
 import Header from './components/header.js';
 
@@ -12,20 +10,23 @@ import Contact from './pages/contact.js';
 import Roadmap from './pages/roadmap.js';
 import Skills from './pages/skills.js';
 import Projects from './pages/project.js';
-import Pcify from './Projects/pcify.js';
-import KASSS from './Projects/KASSS.js';
-import Cleanwave from './Projects/cleanwave.js';
-import KHB from './Projects/khb.js';
-import Finora from './Projects/finora.js';
-import EWWYK from './Projects/earnwithwhatyouknow.js';
-import CSDrop from './Projects/csdrop.js';
-import ScrollToTop from './components/ScrollToTop .js'
-import Lost2Found from './Projects/lost2Found.js';
-import SPARK from './Projects/SPARK.js';
-import RuralLink from './Projects/RuralLink.js';
-import CareLink from './Projects/Care-Link.js';
 import Articles from './pages/Artical.js';
+import ScrollToTop from './components/ScrollToTop .js';
 
+// Project Pages
+import Slaccounting from './Projects/slaccounting.js';
+import Healthbridge from './Projects/healthbridge.js';
+import Learnbridge from './Projects/learnbridge.js';
+import Rurallink from './Projects/rurallink.js';
+import Kickstore from './Projects/kickstore.js';
+import Spark from './Projects/spark.js';
+import Carelink from './Projects/carelink.js';
+import Khb from './Projects/khb.js';
+import Finora from './Projects/finora.js';
+import Pcify from './Projects/pcify.js';
+import Kasss from './Projects/kasss.js';
+import Cleanwave from './Projects/cleanwave.js';
+import Portfolio from './Projects/portfolio.js';
 
 function App() {
   return (
@@ -40,21 +41,22 @@ function App() {
         <Route path="/roadmap" element={<Roadmap />} />
         <Route path="/skills" element={<Skills />} />
         <Route path="/projects" element={<Projects />} />
-        <Route path="/pcify" element={<Pcify />} />
-        <Route path="/kasss" element={<KASSS />} />
-        <Route path="/cleanwave" element={<Cleanwave />} />
-        <Route path="/khb" element={<KHB />} />
-        <Route path="/finora" element={<Finora />} />
-        <Route path="/ewwyk" element={<EWWYK />} />
-        <Route path="/csdrop" element={<CSDrop />} />
-        <Route path="/lost2Found" element={<Lost2Found />} />
-        <Route path="/spark" element={<SPARK />} />
-        <Route path="/rurallink" element={<RuralLink />} />
-        <Route path="/carelink" element={<CareLink />} />
         <Route path="/articles" element={<Articles />} />
-
+        
+        <Route path="/slaccounting" element={<Slaccounting />} />
+        <Route path="/healthbridge" element={<Healthbridge />} />
+        <Route path="/learnbridge" element={<Learnbridge />} />
+        <Route path="/rurallink" element={<Rurallink />} />
+        <Route path="/kickstore" element={<Kickstore />} />
+        <Route path="/spark" element={<Spark />} />
+        <Route path="/carelink" element={<Carelink />} />
+        <Route path="/khb" element={<Khb />} />
+        <Route path="/finora" element={<Finora />} />
+        <Route path="/pcify" element={<Pcify />} />
+        <Route path="/kasss" element={<Kasss />} />
+        <Route path="/cleanwave" element={<Cleanwave />} />
+        <Route path="/portfolio" element={<Portfolio />} />
       </Routes>
-      
     </div>
   );
 }
