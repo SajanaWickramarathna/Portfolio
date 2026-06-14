@@ -10,6 +10,8 @@
 
 html {
   scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(139, 92, 246, 0.5) rgba(255, 255, 255, 0.02);
 }
 
 body {
@@ -20,19 +22,21 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Custom scrollbar */
+/* Custom scrollbar - Liquid Glass Theme */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #0D1117;
+  background: rgba(255, 255, 255, 0.02);
 }
 ::-webkit-scrollbar-thumb {
-  background: #30363D;
-  border-radius: 3px;
+  background: rgba(139, 92, 246, 0.5); /* Violet 500 */
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #58A6FF;
+  background: rgba(139, 92, 246, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 /* Selection highlight */
