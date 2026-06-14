@@ -7,13 +7,9 @@ import {
   FaEnvelope,
   FaWhatsapp,
   FaFacebook,
-  FaCode,
-  FaPalette,
-  FaServer,
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import saj from "../assets/saj.png";
-import { useNavigate } from "react-router-dom";
 
 /* ─── Social links ─────────────────────────────────────────────────── */
 const socialLinks = [
@@ -140,28 +136,10 @@ function AnimatedCounter({ value, suffix }) {
   );
 }
 
-/* ─── Floating orb ──────────────────────────────────────────────────── */
-function FloatingOrb({ style, animate }) {
-  return (
-    <motion.div
-      className="absolute rounded-full pointer-events-none"
-      style={style}
-      animate={animate}
-      transition={{
-        duration: 12,
-        repeat: Infinity,
-        repeatType: "reverse",
-        ease: "easeInOut",
-      }}
-    />
-  );
-}
-
 /* ═══════════════════════════════════════════════════════════════════════
    HERO COMPONENT
 ═══════════════════════════════════════════════════════════════════════ */
 const Hero = () => {
-  const navigate = useNavigate();
   const role = useTypewriter(roles);
   const [tooltip, setTooltip] = useState(null);
 
