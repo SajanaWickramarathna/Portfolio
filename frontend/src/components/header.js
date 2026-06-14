@@ -1,7 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate, useLocation } from "react-router-dom";
 import logo from "../assets/logo.png";
+
+const navItems = [
+  { name: "Home", id: "home" },
+  { name: "About", id: "about" },
+  { name: "Services", id: "services" },
+  { name: "Projects", id: "projects" },
+  { name: "Skills", id: "skills" },
+  { name: "Roadmap", id: "roadmap" },
+  { name: "Articles", id: "articles" },
+];
 
 const Header = () => {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
@@ -9,15 +19,36 @@ const Header = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const navItems = [
-    { name: "Home", id: "home" },
-    { name: "About", id: "about" },
-    { name: "Services", id: "services" },
-    { name: "Projects", id: "projects" },
-    { name: "Skills", id: "skills" },
-    { name: "Roadmap", id: "roadmap" },
-    { name: "Articles", id: "articles" },
-  ];
+  useEffect(() => {
+    const handleScroll = () => {
+      // Only track scroll on the main page
+      if (location.pathname !== "/") return;
+
+      const scrollPosition = window.scrollY + 250; // Offset for the fixed header
+      let currentSection = activeSection;
+
+      for (let i = navItems.length - 1; i >= 0; i--) {
+        const section = document.getElementById(navItems[i].id);
+        if (section) {
+          const sectionTop = section.getBoundingClientRect().top + window.scrollY;
+          if (scrollPosition >= sectionTop) {
+            currentSection = navItems[i].id;
+            break;
+          }
+        }
+      }
+
+      if (activeSection !== currentSection) {
+        setActiveSection(currentSection);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    // Call once on mount to set the initial active section
+    handleScroll();
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [location.pathname, activeSection]);
 
   const handleScrollTo = (id) => {
     setActiveSection(id);
