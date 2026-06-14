@@ -17,14 +17,14 @@ import ScrollToTop from './components/ScrollToTop .js';
 import Slaccounting from './Projects/slaccounting.js';
 import Healthbridge from './Projects/healthbridge.js';
 import Learnbridge from './Projects/learnbridge.js';
-import Rurallink from './Projects/rurallink.js';
+import Rurallink from './Projects/RuralLink.js';
 import Kickstore from './Projects/kickstore.js';
-import Spark from './Projects/spark.js';
+import Spark from './Projects/SPARK.js';
 import Carelink from './Projects/carelink.js';
 import Khb from './Projects/khb.js';
 import Finora from './Projects/finora.js';
 import Pcify from './Projects/pcify.js';
-import Kasss from './Projects/kasss.js';
+import Kasss from './Projects/KASSS.js';
 import Cleanwave from './Projects/cleanwave.js';
 import Portfolio from './Projects/portfolio.js';
 
