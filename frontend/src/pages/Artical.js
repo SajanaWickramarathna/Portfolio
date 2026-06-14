@@ -41,10 +41,6 @@ const Articles = () => {
       ? articles
       : articles.filter((article) => article.platform === activeTab);
 
-  const tabVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 },
-  };
 
   const cardVariants = {
     hidden: { opacity: 0, scale: 0.9 },

@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { NavLink, useLocation, useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import logo from "../assets/logo.png";
 
 const Header = () => {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
-  const location = useLocation();
   const navigate = useNavigate();
 
   const navItems = [
