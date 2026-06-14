@@ -1,12 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import {
-  FaLaptopCode,
-  FaServer,
-  FaPaintBrush,
-  FaTools,
-  FaMobileAlt,
-} from "react-icons/fa";
+import { Code, Server, PenTool, Wrench, Smartphone } from "lucide-react";
 import Footer from "../components/footer";
 
 const services = [
@@ -14,31 +8,36 @@ const services = [
     title: "Frontend Development",
     description:
       "Crafting responsive, performant, and interactive user interfaces using modern frameworks like React.js and Tailwind CSS.",
-    icon: <FaLaptopCode />,
+    icon: <Code className="w-8 h-8" />,
+    color: "from-[#58A6FF] to-[#3182CE]"
   },
   {
     title: "Backend Development",
     description:
-      "Building robust backend systems with Node.js, Express, and MongoDB to power your applications.",
-    icon: <FaServer />,
+      "Building robust backend systems and RESTful APIs with Node.js, Express, and MongoDB to power scalable applications.",
+    icon: <Server className="w-8 h-8" />,
+    color: "from-[#3FB950] to-[#2EA043]"
   },
   {
     title: "UI/UX Design",
     description:
-      "Designing user-centered interfaces and experiences that are intuitive, consistent, and aesthetically pleasing.",
-    icon: <FaPaintBrush />,
+      "Designing user-centered interfaces and experiences that are intuitive, consistent, and highly aesthetically pleasing.",
+    icon: <PenTool className="w-8 h-8" />,
+    color: "from-[#A371F7] to-[#8957E5]"
   },
   {
     title: "Web Maintenance",
     description:
-      "Offering ongoing website updates, performance optimization, and security enhancements.",
-    icon: <FaTools />,
+      "Offering ongoing website updates, performance optimization, refactoring, and critical security enhancements.",
+    icon: <Wrench className="w-8 h-8" />,
+    color: "from-[#F78166] to-[#D73A49]"
   },
   {
     title: "Mobile App Development",
     description:
-      "Creating mobile-friendly experiences using responsive design principles and cross-platform solutions.",
-    icon: <FaMobileAlt />,
+      "Creating seamless, native-feeling mobile experiences using responsive design principles and modern frameworks.",
+    icon: <Smartphone className="w-8 h-8" />,
+    color: "from-[#D2A8FF] to-[#A371F7]"
   },
 ];
 
@@ -58,43 +57,57 @@ const Services = () => {
           ease: "easeInOut",
         }}
       />
-
-      {/* Overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#0D1117]/90 to-[#161B22]/95" />
+
+      {/* Main Content */}
       <section
         id="services"
-        className="relative z-10 flex items-center justify-center min-h-screen px-6 py-20 mt-10"
+        className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 md:px-6 py-24 mt-10"
       >
-        <div className="container mx-auto max-w-5xl text-center">
-          <motion.h2
-            className="text-4xl md:text-5xl font-bold mb-6 tracking-tight text-[#58A6FF]"
+        <div className="w-full max-w-7xl mx-auto">
+          <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            className="text-center mb-16"
           >
-            What I Offer
-          </motion.h2>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white to-[#8B949E] tracking-tight">
+              What I Offer
+            </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-[#58A6FF] to-transparent mx-auto mt-6 rounded-full" />
+          </motion.div>
 
-          <div className="max-w-6xl mx-auto grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {services.map((service, index) => (
               <motion.div
                 key={index}
-                className="bg-[#161B22] p-6 rounded-2xl shadow-md hover:shadow-xl border border-[#1F2937] hover:border-[#58A6FF] transition-all"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="group relative bg-[#161B22]/60 backdrop-blur-xl border border-white/10 p-8 md:p-10 rounded-3xl overflow-hidden hover:border-white/20 transition-all duration-500 shadow-lg hover:shadow-2xl"
               >
-                <div className="text-4xl text-[#58A6FF] mb-4">
-                  {service.icon}
+                {/* Glowing background blob */}
+                <div className={`absolute -right-20 -top-20 w-56 h-56 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-15 rounded-full blur-[60px] transition-opacity duration-700 pointer-events-none`} />
+
+                <div className="relative z-10">
+                  <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} p-4 flex items-center justify-center shadow-lg mb-8 transform group-hover:scale-110 transition-transform duration-500 text-white`}>
+                    {service.icon}
+                  </div>
+                  
+                  <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-gray-400 transition-all duration-300">
+                    {service.title}
+                  </h3>
+                  
+                  <p className="text-[#8B949E] text-base leading-relaxed">
+                    {service.description}
+                  </p>
                 </div>
-                <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
-                <p className="text-[#8B949E] text-sm">{service.description}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
+
       <Footer />
     </div>
   );

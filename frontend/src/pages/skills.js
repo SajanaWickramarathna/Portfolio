@@ -1,22 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 import {
-  FaHtml5,
-  FaCss3Alt,
-  FaPhp,
-  FaJs,
-  FaJava,
-  FaReact,
-  FaNodeJs,
-  FaPython,
+  FaHtml5, FaCss3Alt, FaPhp, FaJs, FaJava, FaReact, FaNodeJs, FaPython,
 } from "react-icons/fa";
 import {
-  SiTailwindcss,
-  SiMongodb,
-  SiMysql,
-  SiExpress,
-  SiFigma,
-  SiKotlin,
+  SiTailwindcss, SiMongodb, SiMysql, SiExpress, SiFigma, SiKotlin,
 } from "react-icons/si";
 
 import Footer from "../components/footer";
@@ -24,7 +12,9 @@ import Footer from "../components/footer";
 const skills = [
   {
     category: "Frontend",
-    color: "text-[#58A6FF]",
+    glow: "from-[#58A6FF]/20 to-[#3182CE]/20",
+    border: "group-hover:border-[#58A6FF]/50",
+    text: "text-[#58A6FF]",
     items: [
       { name: "HTML", icon: <FaHtml5 /> },
       { name: "CSS", icon: <FaCss3Alt /> },
@@ -35,7 +25,9 @@ const skills = [
   },
   {
     category: "Backend",
-    color: "text-[#FF7B72]",
+    glow: "from-[#3FB950]/20 to-[#2EA043]/20",
+    border: "group-hover:border-[#3FB950]/50",
+    text: "text-[#3FB950]",
     items: [
       { name: "Node.js", icon: <FaNodeJs /> },
       { name: "Express.js", icon: <SiExpress /> },
@@ -45,7 +37,9 @@ const skills = [
   },
   {
     category: "Database",
-    color: "text-[#FFD700]",
+    glow: "from-[#E3B341]/20 to-[#D29922]/20",
+    border: "group-hover:border-[#E3B341]/50",
+    text: "text-[#E3B341]",
     items: [
       { name: "MongoDB", icon: <SiMongodb /> },
       { name: "MySQL", icon: <SiMysql /> },
@@ -53,12 +47,16 @@ const skills = [
   },
   {
     category: "Mobile",
-    color: "text-[#A78BFA]",
+    glow: "from-[#A371F7]/20 to-[#8957E5]/20",
+    border: "group-hover:border-[#A371F7]/50",
+    text: "text-[#A371F7]",
     items: [{ name: "Kotlin", icon: <SiKotlin /> }],
   },
   {
     category: "Other Tools",
-    color: "text-[#79C0FF]",
+    glow: "from-[#F78166]/20 to-[#D73A49]/20",
+    border: "group-hover:border-[#F78166]/50",
+    text: "text-[#F78166]",
     items: [
       { name: "Figma", icon: <SiFigma /> },
       { name: "Java", icon: <FaJava /> },
@@ -85,49 +83,61 @@ const SkillTree = () => {
 
       {/* Overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#0D1117]/90 to-[#161B22]/95" />
+
+      {/* Content */}
       <section
         id="skills"
-        className="relative z-10 flex items-center justify-center min-h-screen px-6 py-20 mt-10"
+        className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 md:px-6 py-24 mt-10"
       >
-        <div className="container mx-auto max-w-5xl mb-8 text-center">
-          <motion.h2
-            className="text-4xl md:text-5xl font-bold mb-6 tracking-tight text-[#58A6FF]"
+        <div className="w-full max-w-6xl mx-auto">
+          <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            className="text-center mb-16"
           >
-            Skill Tree
-          </motion.h2>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white to-[#8B949E] tracking-tight">
+              Skill Tree
+            </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-[#58A6FF] to-transparent mx-auto mt-6 rounded-full" />
+          </motion.div>
 
-          <div className="max-w-6xl mx-auto grid gap-10 sm:grid-cols-2 mt-8 lg:grid-cols-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {skills.map((section, index) => (
               <motion.div
                 key={index}
-                className="bg-[#161B22] p-6 rounded-2xl shadow-md border border-[#1F2937] hover:border-[#58A6FF] transition-all"
+                className={`group relative bg-[#161B22]/60 backdrop-blur-xl p-8 rounded-3xl border border-white/10 transition-all duration-500 hover:shadow-2xl ${section.border} overflow-hidden`}
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <h3 className={`text-xl font-semibold mb-4 ${section.color}`}>
-                  {section.category}
-                </h3>
-                <div className="flex flex-wrap gap-3">
-                  {section.items.map((skill, i) => (
-                    <span
-                      key={i}
-                      className="flex items-center gap-2 px-4 py-2 bg-[#0D1117] text-sm rounded-full shadow hover:bg-[#1c2129] transition"
-                    >
-                      <span className="text-xl">{skill.icon}</span>
-                      {skill.name}
-                    </span>
-                  ))}
+                {/* Glowing Background Blob */}
+                <div className={`absolute -right-20 -top-20 w-48 h-48 bg-gradient-to-br ${section.glow} opacity-0 group-hover:opacity-100 rounded-full blur-[60px] transition-opacity duration-700 pointer-events-none`} />
+
+                <div className="relative z-10">
+                  <h3 className={`text-2xl font-bold mb-6 tracking-wide ${section.text}`}>
+                    {section.category}
+                  </h3>
+                  
+                  <div className="flex flex-wrap gap-3">
+                    {section.items.map((skill, i) => (
+                      <motion.div
+                        key={i}
+                        whileHover={{ scale: 1.05, y: -2 }}
+                        className="flex items-center gap-2 px-4 py-2.5 bg-[#0D1117]/80 backdrop-blur-md border border-white/5 text-sm rounded-full shadow-lg hover:border-white/20 transition-all duration-300"
+                      >
+                        <span className={`text-lg ${section.text}`}>{skill.icon}</span>
+                        <span className="text-[#C9D1D9] font-medium">{skill.name}</span>
+                      </motion.div>
+                    ))}
+                  </div>
                 </div>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
+
       <Footer />
     </div>
   );

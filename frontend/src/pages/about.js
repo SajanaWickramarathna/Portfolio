@@ -30,7 +30,7 @@ const About = () => {
         id="about"
         className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 md:px-6 py-24 mt-10"
       >
-        <div className="w-full max-w-6xl mx-auto">
+        <div className="w-full max-w-7xl mx-auto">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -43,43 +43,43 @@ const About = () => {
             <div className="w-24 h-1 bg-gradient-to-r from-[#58A6FF] to-transparent mx-auto mt-6 rounded-full" />
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch max-w-6xl mx-auto">
             
             {/* Left Column - Profile Card */}
             <motion.div 
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
-              className="lg:col-span-5 w-full bg-[#161B22]/60 backdrop-blur-2xl border border-white/10 rounded-3xl p-8 md:p-10 relative overflow-hidden group hover:border-[#58A6FF]/30 transition-colors duration-500 flex flex-col justify-center shadow-2xl"
+              className="lg:col-span-5 w-full bg-[#161B22]/60 backdrop-blur-2xl border border-white/10 rounded-3xl p-8 md:p-10 relative overflow-hidden group hover:border-white/20 transition-colors duration-500 flex flex-col justify-center shadow-lg hover:shadow-2xl"
             >
-              <div className="absolute top-0 right-0 w-64 h-64 bg-[#58A6FF]/10 rounded-full blur-[80px] pointer-events-none transition-transform duration-700 group-hover:scale-150" />
+              <div className="absolute -left-20 -top-20 w-64 h-64 bg-gradient-to-br from-[#58A6FF] to-[#3182CE] opacity-10 group-hover:opacity-20 rounded-full blur-[80px] pointer-events-none transition-transform duration-700 group-hover:scale-150" />
               
               <div className="relative z-10">
                 <div className="w-32 h-32 bg-gradient-to-br from-[#1F242C] to-[#0D1117] rounded-full border border-white/10 mx-auto mb-8 flex items-center justify-center shadow-lg relative overflow-hidden group-hover:border-[#58A6FF]/50 transition-colors duration-500">
                    <User className="w-14 h-14 text-[#8B949E] group-hover:text-[#58A6FF] transition-colors duration-500" />
                 </div>
                 
-                <h3 className="text-3xl font-bold text-center text-white mb-2 tracking-tight">Sajana Wickramarathna</h3>
+                <h3 className="text-3xl font-bold text-center text-white mb-2 tracking-tight group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-gray-400 transition-all duration-300">Sajana Wickramarathna</h3>
                 <p className="text-[#58A6FF] text-center font-medium mb-10 text-lg">Software Engineering Undergraduate</p>
                 
                 <div className="space-y-4">
-                  <div className="flex items-center gap-5 text-[#C9D1D9] bg-black/20 p-5 rounded-2xl border border-white/5 hover:border-white/10 transition-colors">
+                  <div className="flex items-center gap-5 text-[#C9D1D9] bg-[#0D1117]/80 p-5 rounded-2xl border border-white/5 hover:border-white/20 hover:bg-[#0D1117] transition-all">
                     <div className="p-2 bg-[#58A6FF]/10 rounded-xl">
                       <GraduationCap className="w-6 h-6 text-[#58A6FF]" />
                     </div>
                     <span className="text-sm font-medium">BSc IT (Spec. Software Engineering) at SLIIT</span>
                   </div>
-                  <div className="flex items-center gap-5 text-[#C9D1D9] bg-black/20 p-5 rounded-2xl border border-white/5 hover:border-white/10 transition-colors">
+                  <div className="flex items-center gap-5 text-[#C9D1D9] bg-[#0D1117]/80 p-5 rounded-2xl border border-white/5 hover:border-white/20 hover:bg-[#0D1117] transition-all">
                     <div className="p-2 bg-[#F78166]/10 rounded-xl">
                       <Code2 className="w-6 h-6 text-[#F78166]" />
                     </div>
                     <span className="text-sm font-medium">Full Stack Web & Mobile Developer</span>
                   </div>
-                  <div className="flex items-center gap-5 text-[#C9D1D9] bg-black/20 p-5 rounded-2xl border border-white/5 hover:border-white/10 transition-colors">
+                  <div className="flex items-center gap-5 text-[#C9D1D9] bg-[#0D1117]/80 p-5 rounded-2xl border border-white/5 hover:border-white/20 hover:bg-[#0D1117] transition-all">
                     <div className="p-2 bg-[#3FB950]/10 rounded-xl">
                       <MapPin className="w-6 h-6 text-[#3FB950]" />
                     </div>
-                    <span className="text-sm font-medium">Sri Lanka</span>
+                    <span className="text-sm font-medium">Colombo, Sri Lanka</span>
                   </div>
                 </div>
               </div>
@@ -92,22 +92,22 @@ const About = () => {
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
               className="lg:col-span-7 flex flex-col justify-between"
             >
-              <div className="bg-[#0D1117]/60 backdrop-blur-xl border border-white/5 rounded-3xl p-8 md:p-12 mb-8 shadow-inner relative overflow-hidden flex-grow">
-                <div className="absolute top-[-50px] left-[-50px] w-48 h-48 bg-white/5 rounded-full blur-[60px] pointer-events-none" />
+              <div className="bg-[#161B22]/60 backdrop-blur-xl border border-white/10 rounded-3xl p-8 md:p-12 mb-8 shadow-lg relative overflow-hidden flex-grow group hover:border-white/20 transition-all duration-500">
+                <div className="absolute -right-20 -bottom-20 w-64 h-64 bg-gradient-to-tl from-[#A371F7] to-[#8957E5] opacity-10 group-hover:opacity-20 rounded-full blur-[80px] pointer-events-none transition-transform duration-700 group-hover:scale-150" />
                 
                 <h3 className="text-2xl md:text-3xl font-bold text-white mb-8 flex items-center gap-4">
-                  <div className="p-3 bg-[#58A6FF]/10 rounded-2xl">
-                    <Briefcase className="text-[#58A6FF] w-7 h-7" />
+                  <div className="p-3 bg-gradient-to-br from-[#A371F7] to-[#8957E5] rounded-2xl shadow-lg text-white">
+                    <Briefcase className="w-7 h-7" />
                   </div>
                   My Journey
                 </h3>
                 
-                <div className="space-y-6 text-[#8B949E] text-base md:text-lg leading-relaxed font-light">
+                <div className="space-y-6 text-[#8B949E] text-base md:text-lg leading-relaxed font-light relative z-10">
                   <p>
                     Hi! I'm a passionate developer who thrives on creating <span className="text-white font-medium">performant, engaging applications</span>. My journey in tech started with a profound curiosity about how things work under the hood, which naturally led me to software engineering.
                   </p>
                   <p>
-                    Today, I specialize in the <span className="text-[#58A6FF] font-medium">MERN stack</span> and have hands-on experience building full-stack web platforms, Android apps, and scalable telemedicine solutions. 
+                    Today, I specialize in the <span className="text-[#A371F7] font-medium">MERN stack</span> and have hands-on experience building full-stack web platforms, Android apps, and scalable telemedicine solutions. 
                   </p>
                   <p>
                     Whether I'm crafting an intuitive UI in <span className="text-white font-medium">Figma</span> or architecting a robust backend in <span className="text-[#3FB950] font-medium">Node.js</span>, I bring a detail-oriented and collaborative approach to every project. I love tackling challenging projects and continuously growing as a tech professional.
@@ -124,7 +124,7 @@ const About = () => {
                 </button>
                 <a
                   href={Cv}
-                  className="flex-1 flex items-center justify-center gap-3 bg-[#161B22] border border-[#58A6FF]/30 text-[#58A6FF] hover:bg-[#58A6FF]/10 hover:border-[#58A6FF] font-bold px-8 py-5 rounded-2xl transition-all duration-300 transform hover:-translate-y-1 text-lg shadow-lg"
+                  className="flex-1 flex items-center justify-center gap-3 bg-[#0D1117]/80 backdrop-blur-xl border border-white/10 text-white hover:bg-white/10 hover:border-white/20 font-bold px-8 py-5 rounded-2xl transition-all duration-300 transform hover:-translate-y-1 text-lg shadow-lg"
                   download
                 >
                   <Download className="w-6 h-6" /> Download CV

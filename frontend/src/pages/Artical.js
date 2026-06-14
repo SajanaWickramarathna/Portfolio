@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { FaExternalLinkAlt, FaMedium  } from "react-icons/fa";
+import { FaMedium } from "react-icons/fa";
 import { SiBehance } from "react-icons/si";
+import { Layers, FileText, PenTool, ChevronRight } from "lucide-react";
 import Footer from "../components/footer";
 
 const Articles = () => {
   const [activeTab, setActiveTab] = useState("all");
 
-  // Sample articles data - replace with your actual articles
   const articles = [
     {
       id: 1,
@@ -18,21 +18,19 @@ const Articles = () => {
       platform: "medium",
       platformName: "Medium",
       url: "https://medium.com/@sajanawickramarathna143/kicknet-store-how-i-designed-built-launched-a-full-stack-online-shop-a-complete-case-study-e36985d1ccf4",
-      image: "🛒",
-      date: "Nov 20, 2025",
-      readTime: "11 min read",
+      icon: <FileText className="w-8 h-8" />,
+      color: "from-[#10B981] to-[#047857]", // Medium Green
     },
-
     {
       id: 2,
       title: "Lost2Found – Lost Item Finder App (UI/UX)",
       description:
-        "A mobile-first case study for Sri Lanka: covering the design process, user pain points, UI/UX decisions and a clean, intuitive interface meant to help people report and recover lost belongings — streamlining communication between finders and owners.",
+        "A mobile-first case study for Sri Lanka: covering the design process, user pain points, UI/UX decisions and a clean, intuitive interface meant to help people report and recover lost belongings.",
       platform: "behance",
       platformName: "Behance",
       url: "https://www.behance.net/gallery/239024907/Lost2Found-Lost-Item-Finder-App-%28UIUX%29",
-      image: "📱",
-      date: "Nov 21, 2025",
+      icon: <PenTool className="w-8 h-8" />,
+      color: "from-[#3B82F6] to-[#1D4ED8]", // Behance Blue
     },
   ];
 
@@ -40,16 +38,6 @@ const Articles = () => {
     activeTab === "all"
       ? articles
       : articles.filter((article) => article.platform === activeTab);
-
-
-  const cardVariants = {
-    hidden: { opacity: 0, scale: 0.9 },
-    visible: (i) => ({
-      opacity: 1,
-      scale: 1,
-      transition: { delay: i * 0.1 },
-    }),
-  };
 
   return (
     <div className="relative min-h-screen font-inter overflow-hidden text-white">
@@ -66,26 +54,24 @@ const Articles = () => {
           ease: "easeInOut",
         }}
       />
-
-      {/* Overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#0D1117]/90 to-[#161B22]/95" />
 
-      {/* Content */}
-      <section className="relative z-10 px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-28">
-        <div className="max-w-6xl mx-auto">
+      {/* Main Content */}
+      <section className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 md:px-6 py-24 mt-10">
+        <div className="w-full max-w-7xl mx-auto">
           {/* Header */}
           <motion.div
-            initial={{ opacity: 0, y: -20 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-8 sm:mb-12 mt-14 sm:mt-8 px-2"
+            className="text-center mb-16"
           >
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 sm:mb-4 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-              My Articles & Projects
-            </h1>
-            <p className="text-gray-300 text-base sm:text-lg max-w-2xl mx-auto">
-              Explore my latest articles on Medium and design projects on
-              Behance
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white to-[#8B949E] tracking-tight">
+              My Articles
+            </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-[#58A6FF] to-transparent mx-auto mt-6 rounded-full" />
+            <p className="text-[#8B949E] text-base sm:text-lg max-w-2xl mx-auto mt-6 font-light">
+              Explore my latest engineering articles on Medium and detailed design case studies on Behance.
             </p>
           </motion.div>
 
@@ -94,108 +80,81 @@ const Articles = () => {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="flex justify-center gap-2 sm:gap-3 md:gap-4 mb-8 sm:mb-12 flex-wrap px-2"
+            className="flex justify-center gap-4 mb-16 flex-wrap"
           >
             {[
-              { id: "all", label: "All", icon: "📚" },
+              { id: "all", label: "All Works", icon: <Layers size={18} /> },
               { id: "medium", label: "Medium", icon: <FaMedium size={18} /> },
-              {
-                id: "behance",
-                label: "Behance",
-                icon: <SiBehance size={18} />,
-              },
+              { id: "behance", label: "Behance", icon: <SiBehance size={18} /> },
             ].map((tab) => (
               <motion.button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className={`px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-semibold flex items-center gap-2 transition-all text-sm sm:text-base ${
+                className={`px-6 py-3 rounded-2xl font-semibold flex items-center gap-3 transition-all duration-300 text-sm shadow-lg ${
                   activeTab === tab.id
-                    ? "bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-lg"
-                    : "bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700"
+                    ? "bg-gradient-to-r from-[#58A6FF] to-[#3182CE] text-white border border-[#58A6FF]/50 shadow-[0_0_20px_rgba(88,166,255,0.4)]"
+                    : "bg-[#161B22]/80 backdrop-blur-xl border border-white/10 text-[#C9D1D9] hover:border-white/20 hover:text-white"
                 }`}
               >
-                <span>{tab.icon}</span>
+                {tab.icon}
                 {tab.label}
               </motion.button>
             ))}
           </motion.div>
 
-          {/* Articles Grid */}
-          <motion.div
-            layout
-            className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 px-2 sm:px-0"
-          >
+          {/* Articles Grid (EXACT match to projects.js) */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {filteredArticles.map((article, index) => (
               <motion.div
                 key={article.id}
-                variants={cardVariants}
-                initial="hidden"
-                animate="visible"
-                custom={index}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: (index % 6) * 0.1 }}
                 layout
-                whileHover={{ y: -5 }}
-                className="group relative bg-gradient-to-br from-gray-800/40 to-gray-900/40 rounded-xl overflow-hidden border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 backdrop-blur-sm"
+                className="group relative bg-[#161B22]/60 backdrop-blur-xl border border-white/10 p-8 md:p-10 rounded-3xl overflow-hidden hover:border-white/20 transition-all duration-500 shadow-lg hover:shadow-2xl flex flex-col"
               >
-                {/* Card Background Gradient */}
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/0 to-purple-500/0 group-hover:from-blue-500/10 group-hover:to-purple-500/10 transition-all duration-300" />
+                {/* Glowing background blob */}
+                <div className={`absolute -right-20 -top-20 w-56 h-56 bg-gradient-to-br ${article.color} opacity-0 group-hover:opacity-15 rounded-full blur-[60px] transition-opacity duration-700 pointer-events-none`} />
 
-                {/* Content */}
-                <div className="relative p-4 sm:p-6 h-full flex flex-col">
-                  {/* Header */}
-                  <div className="flex items-start justify-between mb-3 sm:mb-4">
-                    <div className="text-4xl mb-3">{article.image}</div>
-                    <span className="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-xs font-semibold flex items-center gap-1 border border-blue-500/30">
-                      {article.platform === "medium" ? (
-                        <FaMedium size={12} />
-                      ) : (
-                        <SiBehance size={12} />
-                      )}
-                      {article.platformName}
-                    </span>
+                <div className="relative z-10 flex flex-col flex-grow">
+                  <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${article.color} p-4 flex items-center justify-center shadow-lg mb-8 transform group-hover:scale-110 transition-transform duration-500 text-white`}>
+                    {article.icon}
                   </div>
-
-                  {/* Title */}
-                  <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-white group-hover:text-blue-400 transition-colors line-clamp-2">
+                  
+                  <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-gray-400 transition-all duration-300">
                     {article.title}
                   </h3>
-
-                  {/* Description */}
-                  <p className="text-gray-400 text-xs sm:text-sm mb-3 sm:mb-4 flex-grow line-clamp-3">
+                  
+                  <p className="text-[#8B949E] text-base leading-relaxed flex-grow mb-8">
                     {article.description}
                   </p>
 
-                  {/* Meta Info */}
-                  <div className="flex flex-wrap gap-2 sm:gap-3 text-xs text-gray-400 mb-3 sm:mb-4 pb-3 sm:pb-4 border-b border-gray-700/50">
-                    <span>{article.date}</span>
-                    {article.readTime && <span>• {article.readTime}</span>}
-                  </div>
-
-                  {/* CTA Button */}
-                  <motion.a
+                  <a
                     href={article.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    whileHover={{ x: 5 }}
-                    className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold hover:shadow-lg transition-all w-full justify-center text-sm sm:text-base"
+                    className="mt-auto w-full inline-flex items-center justify-center gap-2 py-4 bg-[#0D1117]/50 border border-white/10 hover:bg-white/5 text-white font-semibold rounded-xl transition-all duration-300 text-sm tracking-wide group-hover:border-white/20"
                   >
-                    Read More
-                    <FaExternalLinkAlt size={14} />
-                  </motion.a>
+                    Read on {article.platformName} <ChevronRight className="w-4 h-4" />
+                  </a>
                 </div>
               </motion.div>
             ))}
-          </motion.div>
+          </div>
 
           {/* Empty State */}
           {filteredArticles.length === 0 && (
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              className="text-center py-12"
+              className="text-center py-20"
             >
-              <p className="text-gray-400 text-lg">
+              <div className="inline-flex items-center justify-center w-20 h-20 bg-white/5 rounded-full mb-6">
+                <FileText className="w-10 h-10 text-[#8B949E]" />
+              </div>
+              <p className="text-[#C9D1D9] text-xl font-medium">
                 No articles found in this category.
               </p>
             </motion.div>
@@ -207,35 +166,31 @@ const Articles = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="mt-12 sm:mt-16 text-center px-2"
+            className="mt-20 text-center"
           >
-            <p className="text-gray-300 mb-4 sm:mb-6 text-sm sm:text-base">
-              Connect with me on my platforms
-            </p>
-            <div className="flex justify-center gap-3 sm:gap-4 flex-wrap">
+            <h3 className="text-xl font-bold text-white mb-8 tracking-wide">Connect with me</h3>
+            <div className="flex justify-center gap-6 flex-wrap">
               <motion.a
                 href="https://medium.com/@sajanawickramarathna143"
                 target="_blank"
                 rel="noopener noreferrer"
-                whileHover={{ scale: 1.1 }}
+                whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="p-3 sm:p-4 bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-700 rounded-lg hover:border-blue-500/50 transition-all flex items-center gap-2 text-gray-300 hover:text-blue-400 text-sm sm:text-base"
+                className="px-8 py-4 bg-[#161B22]/60 backdrop-blur-xl border border-white/10 rounded-2xl hover:border-[#10B981]/50 transition-all flex items-center gap-3 text-[#C9D1D9] hover:text-[#10B981] font-medium shadow-lg hover:shadow-[0_0_20px_rgba(16,185,129,0.2)]"
               >
-                <FaMedium size={20} />
-                <span className="hidden sm:inline">Follow on Medium</span>
-                <span className="sm:hidden">Medium</span>
+                <FaMedium size={24} />
+                <span>Follow on Medium</span>
               </motion.a>
               <motion.a
                 href="https://www.behance.net/sajanawickram"
                 target="_blank"
                 rel="noopener noreferrer"
-                whileHover={{ scale: 1.1 }}
+                whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="p-3 sm:p-4 bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-700 rounded-lg hover:border-purple-500/50 transition-all flex items-center gap-2 text-gray-300 hover:text-purple-400 text-sm sm:text-base"
+                className="px-8 py-4 bg-[#161B22]/60 backdrop-blur-xl border border-white/10 rounded-2xl hover:border-[#3B82F6]/50 transition-all flex items-center gap-3 text-[#C9D1D9] hover:text-[#3B82F6] font-medium shadow-lg hover:shadow-[0_0_20px_rgba(59,130,246,0.2)]"
               >
-                <SiBehance size={20} />
-                <span className="hidden sm:inline">Follow on Behance</span>
-                <span className="sm:hidden">Behance</span>
+                <SiBehance size={24} />
+                <span>Follow on Behance</span>
               </motion.a>
             </div>
           </motion.div>

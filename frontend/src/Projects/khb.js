@@ -34,84 +34,95 @@ const Khb = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-[#0D1117]/90 to-[#161B22]/95" />
 
       {/* Main Content */}
+      
       <section
         id="project-details"
         className="relative z-10 flex items-center justify-center min-h-screen px-4 md:px-6 py-24 mt-10"
       >
-        <div className="w-full max-w-5xl mx-auto flex flex-col items-center relative">
+        <div className="w-full max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+          
+          {/* Left Column - Overview Bento */}
           <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="w-full bg-[#161B22]/60 backdrop-blur-2xl border border-white/10 rounded-3xl p-8 md:p-16 shadow-[0_0_50px_rgba(88,166,255,0.1)] relative overflow-hidden"
+            className="lg:col-span-7 bg-[#161B22]/60 backdrop-blur-2xl border border-white/10 rounded-3xl p-8 md:p-12 relative overflow-hidden group hover:border-white/20 transition-all duration-500 shadow-lg hover:shadow-2xl flex flex-col"
           >
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#58A6FF]/10 rounded-full blur-[120px] pointer-events-none" />
-
-            <div className="relative z-10 flex flex-col items-center text-center">
-              <motion.div 
-                initial={{ scale: 0 }} 
-                animate={{ scale: 1 }} 
-                transition={{ duration: 0.5, delay: 0.2 }}
-                className="w-20 h-20 bg-gradient-to-br from-[#58A6FF] to-[#3182CE] rounded-2xl mb-8 flex items-center justify-center shadow-lg shadow-[#58A6FF]/20"
-              >
-                 <span className="text-4xl font-extrabold text-white">#</span>
-              </motion.div>
-
+            <div className="absolute -left-20 -top-20 w-64 h-64 bg-gradient-to-br from-[#58A6FF] to-[#3182CE] opacity-10 group-hover:opacity-20 rounded-full blur-[80px] pointer-events-none transition-transform duration-700 group-hover:scale-150" />
+            
+            <div className="relative z-10 flex flex-col h-full">
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white to-[#8B949E] mb-6 tracking-tight">
                 KHB Associate
               </h2>
               
-              <p className="text-[#C9D1D9] text-base md:text-lg mb-12 max-w-3xl leading-relaxed font-light">
+              <p className="text-[#C9D1D9] text-base md:text-lg mb-10 leading-relaxed font-light">
                 A modern web application for a textile machinery sales company, featuring a responsive interface, product catalog, authentication, and order management with real-time updates.
               </p>
 
               
-              <div className="w-full max-w-3xl bg-black/20 rounded-2xl p-6 md:p-8 border border-white/5 mb-12 shadow-inner">
-                <h3 className="text-xl font-semibold text-white mb-6 flex items-center gap-2">
-                   <span className="w-2 h-2 rounded-full bg-[#58A6FF]"></span> Key Highlights
+              <div className="w-full bg-[#0D1117]/80 rounded-2xl p-6 md:p-8 border border-white/5 mt-auto shadow-inner hover:border-white/10 transition-colors">
+                <h3 className="text-xl font-semibold text-white mb-6 flex items-center gap-3">
+                   <span className="p-2 bg-[#58A6FF]/10 rounded-lg"><span className="w-2 h-2 rounded-full bg-[#58A6FF] block"></span></span> Key Features
                 </h3>
                 <ul className="text-[#8B949E] text-sm md:text-base space-y-4">
-                  <li className="flex items-start gap-3 text-left"><span className="text-[#58A6FF] mt-1">✦</span><span>API Authentication</span></li>
-<li className="flex items-start gap-3 text-left"><span className="text-[#58A6FF] mt-1">✦</span><span>1 to 1 Chat with Socket.io</span></li>
-
+                  <li className="flex items-start gap-3 text-left"><span className="text-[#58A6FF] mt-1 font-bold">»</span><span><span className="text-[#58A6FF] mt-1">✦</span><span>API Authentication</span></span></li>
+<li className="flex items-start gap-3 text-left"><span className="text-[#58A6FF] mt-1 font-bold">»</span><span><span className="text-[#58A6FF] mt-1">✦</span><span>1 to 1 Chat with Socket.io</span></span></li>
                 </ul>
               </div>
-        
 
-              <div className="flex flex-col items-center w-full">
-                <h3 className="text-sm font-bold text-[#8B949E] uppercase tracking-widest mb-6">
-                  Technologies Used
-                </h3>
-                <div className="flex flex-wrap justify-center gap-4 mb-12">
-                  {techs.map((tech, i) => (
-                    <motion.span
-                      key={i}
-                      whileHover={{ scale: 1.05, backgroundColor: "#21262D" }}
-                      transition={{ type: "spring", stiffness: 300 }}
-                      className="flex items-center gap-2 px-4 py-2 text-sm bg-[#0D1117]/80 backdrop-blur-md border border-white/10 rounded-full shadow-lg cursor-pointer text-gray-300 hover:text-white"
-                    >
-                      {tech.icon}
-                      {tech.label}
-                    </motion.span>
-                  ))}
-                </div>
-              </div>
+            </div>
+          </motion.div>
 
-              <motion.a
-                href="https://github.com/SajanaWickramarathna/KHB-E-com"
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="relative inline-flex items-center justify-center px-8 py-4 overflow-hidden font-bold text-white bg-gradient-to-r from-[#F78166] to-[#FF9E7D] rounded-full shadow-[0_0_20px_rgba(247,129,102,0.3)] hover:shadow-[0_0_30px_rgba(247,129,102,0.5)] transition-all duration-300"
-              >
-                <span className="absolute inset-0 w-full h-full -mt-1 rounded-lg opacity-30 bg-gradient-to-b from-transparent via-transparent to-black"></span>
+          {/* Right Column - Tech & Links Bento */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+            className="lg:col-span-5 flex flex-col gap-8"
+          >
+            {/* Tech Stack Bento */}
+            <div className="bg-[#161B22]/60 backdrop-blur-2xl border border-white/10 rounded-3xl p-8 md:p-10 relative overflow-hidden group hover:border-white/20 transition-all duration-500 shadow-lg flex-grow">
+               <div className="absolute -right-20 -top-20 w-64 h-64 bg-gradient-to-bl from-[#A371F7] to-[#8957E5] opacity-10 group-hover:opacity-20 rounded-full blur-[80px] pointer-events-none transition-transform duration-700 group-hover:scale-150" />
+               <div className="relative z-10">
+                 <h3 className="text-2xl font-bold text-white mb-8 flex items-center gap-4">
+                    <span className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#A371F7] to-[#8957E5] flex items-center justify-center text-white font-bold shadow-lg shadow-[#A371F7]/30">⚙️</span>
+                    Technologies Used
+                 </h3>
+                 <div className="flex flex-wrap gap-3">
+                   {techs.map((tech, i) => (
+                     <motion.span
+                       key={i}
+                       whileHover={{ scale: 1.05 }}
+                       className="flex items-center gap-2 px-5 py-2.5 text-sm font-medium bg-[#0D1117]/80 backdrop-blur-md border border-white/5 rounded-full shadow cursor-default text-[#C9D1D9] hover:text-white hover:border-white/20 hover:bg-[#0D1117] transition-all"
+                     >
+                       {tech.icon}
+                       {tech.label}
+                     </motion.span>
+                   ))}
+                 </div>
+               </div>
+            </div>
+
+            {/* CTA Bento */}
+            <div className="bg-[#161B22]/60 backdrop-blur-2xl border border-white/10 rounded-3xl p-8 relative overflow-hidden group hover:border-white/20 transition-all duration-500 shadow-lg">
+               <div className="absolute -left-20 -bottom-20 w-64 h-64 bg-gradient-to-tr from-[#3FB950] to-[#2EA043] opacity-10 group-hover:opacity-20 rounded-full blur-[80px] pointer-events-none transition-transform duration-700 group-hover:scale-150" />
+               <div className="relative z-10 flex flex-col items-center">
+                 <h3 className="text-xl font-bold text-white mb-6 text-center tracking-wide">Ready to see it in action?</h3>
+                 <a
+                    href="https://github.com/SajanaWickramarathna/KHB-E-com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full flex items-center justify-center gap-3 bg-gradient-to-r from-[#3FB950] to-[#2EA043] hover:from-[#2EA043] hover:to-[#3FB950] text-white font-bold px-8 py-5 rounded-2xl shadow-[0_0_20px_rgba(63,185,80,0.3)] hover:shadow-[0_0_30px_rgba(63,185,80,0.5)] transition-all duration-300 transform hover:-translate-y-1 text-lg"
+                 >
+                    <span className="absolute inset-0 w-full h-full -mt-1 rounded-lg opacity-30 bg-gradient-to-b from-transparent via-transparent to-black"></span>
                 <span className="relative text-[#0D1117] text-lg">View Source Code</span>
-              </motion.a>
+                 </a>
+               </div>
             </div>
           </motion.div>
         </div>
       </section>
+
 
       <Footer />
     </div>
