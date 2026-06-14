@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
   SiReact,
   SiNodedotjs,
@@ -8,6 +9,7 @@ import {
   SiMongodb
 } from "react-icons/si";
 import { motion } from "framer-motion";
+import { ArrowLeft } from "lucide-react";
 import Footer from "../components/footer";
 
 const techs = [
@@ -23,22 +25,21 @@ const techs = [
 const Rurallink = () => {
   return (
     <div className="relative min-h-screen font-inter overflow-hidden text-white">
-      {/* Background animation */}
-      <motion.div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url('/backgroundhero.jpg')` }}
-        initial={{ scale: 1.1 }}
-        animate={{ scale: 1 }}
-        transition={{ duration: 30, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" }}
-      />
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0D1117]/90 to-[#161B22]/95" />
-
       {/* Main Content */}
       
       <section
         id="project-details"
-        className="relative z-10 flex items-center justify-center min-h-screen px-4 md:px-6 py-24 mt-10"
+        className="relative z-10 flex flex-col justify-center min-h-screen px-4 md:px-6 py-24 mt-10"
       >
+        <div className="w-full max-w-6xl mx-auto mb-8 flex justify-start">
+          <Link
+            to="/#projects"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/[0.02] backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all text-[#C9D1D9] hover:text-white font-medium text-sm group shadow-[0_8px_32px_0_rgba(0,0,0,0.36)]"
+          >
+            <ArrowLeft size={16} className="transform group-hover:-translate-x-1 transition-transform" />
+            Back to Projects
+          </Link>
+        </div>
         <div className="w-full max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
           
           {/* Left Column - Overview Bento */}
@@ -46,7 +47,7 @@ const Rurallink = () => {
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="lg:col-span-7 bg-[#161B22]/60 backdrop-blur-2xl border border-white/10 rounded-3xl p-8 md:p-12 relative overflow-hidden group hover:border-white/20 transition-all duration-500 shadow-lg hover:shadow-2xl flex flex-col"
+            className="lg:col-span-7 bg-white/[0.02] backdrop-blur-sm border border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.36)] rounded-3xl p-8 md:p-12 relative overflow-hidden group hover:border-white/20 transition-all duration-500 shadow-lg hover:shadow-2xl flex flex-col"
           >
             <div className="absolute -left-20 -top-20 w-64 h-64 bg-gradient-to-br from-[#58A6FF] to-[#3182CE] opacity-10 group-hover:opacity-20 rounded-full blur-[80px] pointer-events-none transition-transform duration-700 group-hover:scale-150" />
             
@@ -60,7 +61,7 @@ const Rurallink = () => {
               </p>
 
               
-              <div className="w-full bg-[#0D1117]/80 rounded-2xl p-6 md:p-8 border border-white/5 mt-auto shadow-inner hover:border-white/10 transition-colors">
+              <div className="w-full bg-white/[0.01] rounded-2xl p-6 md:p-8 border border-white/5 mt-auto shadow-inner hover:border-white/10 transition-colors">
                 <h3 className="text-xl font-semibold text-white mb-6 flex items-center gap-3">
                    <span className="p-2 bg-[#58A6FF]/10 rounded-lg"><span className="w-2 h-2 rounded-full bg-[#58A6FF] block"></span></span> Key Features
                 </h3>
@@ -83,7 +84,7 @@ const Rurallink = () => {
             className="lg:col-span-5 flex flex-col gap-8"
           >
             {/* Tech Stack Bento */}
-            <div className="bg-[#161B22]/60 backdrop-blur-2xl border border-white/10 rounded-3xl p-8 md:p-10 relative overflow-hidden group hover:border-white/20 transition-all duration-500 shadow-lg flex-grow">
+            <div className="bg-white/[0.02] backdrop-blur-sm border border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.36)] rounded-3xl p-8 md:p-10 relative overflow-hidden group hover:border-white/20 transition-all duration-500 shadow-lg flex-grow">
                <div className="absolute -right-20 -top-20 w-64 h-64 bg-gradient-to-bl from-[#A371F7] to-[#8957E5] opacity-10 group-hover:opacity-20 rounded-full blur-[80px] pointer-events-none transition-transform duration-700 group-hover:scale-150" />
                <div className="relative z-10">
                  <h3 className="text-2xl font-bold text-white mb-8 flex items-center gap-4">
@@ -95,7 +96,7 @@ const Rurallink = () => {
                      <motion.span
                        key={i}
                        whileHover={{ scale: 1.05 }}
-                       className="flex items-center gap-2 px-5 py-2.5 text-sm font-medium bg-[#0D1117]/80 backdrop-blur-md border border-white/5 rounded-full shadow cursor-default text-[#C9D1D9] hover:text-white hover:border-white/20 hover:bg-[#0D1117] transition-all"
+                       className="flex items-center gap-2 px-5 py-2.5 text-sm font-medium bg-white/[0.01] backdrop-blur-md border border-white/5 rounded-full shadow cursor-default text-[#C9D1D9] hover:text-white hover:border-white/20 hover:bg-white/[0.05] transition-all"
                      >
                        {tech.icon}
                        {tech.label}
@@ -106,7 +107,7 @@ const Rurallink = () => {
             </div>
 
             {/* CTA Bento */}
-            <div className="bg-[#161B22]/60 backdrop-blur-2xl border border-white/10 rounded-3xl p-8 relative overflow-hidden group hover:border-white/20 transition-all duration-500 shadow-lg">
+            <div className="bg-white/[0.02] backdrop-blur-sm border border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.36)] rounded-3xl p-8 relative overflow-hidden group hover:border-white/20 transition-all duration-500 shadow-lg">
                <div className="absolute -left-20 -bottom-20 w-64 h-64 bg-gradient-to-tr from-[#3FB950] to-[#2EA043] opacity-10 group-hover:opacity-20 rounded-full blur-[80px] pointer-events-none transition-transform duration-700 group-hover:scale-150" />
                <div className="relative z-10 flex flex-col items-center">
                  <h3 className="text-xl font-bold text-white mb-6 text-center tracking-wide">Ready to see it in action?</h3>

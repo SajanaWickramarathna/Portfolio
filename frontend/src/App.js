@@ -3,14 +3,6 @@ import { Route, Routes } from "react-router-dom";
 
 import Header from './components/header.js';
 
-import Home from './pages/home.js';
-import About from './pages/about.js';
-import Services from './pages/services.js';
-import Contact from './pages/contact.js';
-import Roadmap from './pages/roadmap.js';
-import Skills from './pages/skills.js';
-import Projects from './pages/project.js';
-import Articles from './pages/Artical.js';
 import ScrollToTop from './components/ScrollToTop .js';
 
 // Project Pages
@@ -29,10 +21,12 @@ import Cleanwave from './Projects/cleanwave.js';
 import Portfolio from './Projects/portfolio.js';
 
 import MainPage from './pages/MainPage.js';
+import ParticleBackground from './components/ParticleBackground.js';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App relative min-h-screen text-white font-inter">
+      <ParticleBackground />
       <ScrollToTop />
       <Header />
       <Routes>

@@ -8,15 +8,9 @@ import Roadmap from "./roadmap.js";
 import Articles from "./Artical.js";
 import Contact from "./contact.js";
 import Footer from "../components/footer.js";
-
-import { motion } from "framer-motion";
-import ParticleBackground from "../components/ParticleBackground.js";
-
 const MainPage = () => {
   return (
     <div className="relative min-h-screen text-white font-inter">
-      <ParticleBackground />
-
       {/* Content wrapper with z-index to appear above background */}
       <div className="relative z-10 flex flex-col gap-24 py-10">
       <Home />
