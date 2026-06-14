@@ -9,27 +9,14 @@ import {
 } from "react-icons/fa";
 
 const Contact = () => (
-  <div className="relative min-h-screen font-inter overflow-hidden text-white">
-    {/* Background with animation */}
-    <motion.div
-      className="absolute inset-0 bg-cover bg-center"
-      style={{ backgroundImage: `url('/backgroundhero.jpg')` }}
-      initial={{ scale: 1.1 }}
-      animate={{ scale: 1 }}
-      transition={{
-        duration: 30,
-        repeat: Infinity,
-        repeatType: "reverse",
-        ease: "easeInOut",
-      }}
-    />
+  <div className="relative  font-inter overflow-hidden text-white">
+    
 
-    {/* Overlay */}
-    <div className="absolute inset-0 bg-gradient-to-b from-[#0D1117]/90 to-[#161B22]/95" />
+    
 
     <section
       id="contact"
-      className="relative z-10 flex items-center justify-center min-h-screen px-4 md:px-6 py-24 mt-10"
+      className="relative z-10 scroll-mt-28 md:scroll-mt-32 flex items-center justify-center  px-4 md:px-6 py-16 md:py-24 mt-6 md:mt-10"
     >
       <div className="w-full max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12 lg:gap-24">
         

@@ -28,21 +28,17 @@ import Kasss from './Projects/kasss.js';
 import Cleanwave from './Projects/cleanwave.js';
 import Portfolio from './Projects/portfolio.js';
 
+import MainPage from './pages/MainPage.js';
+
 function App() {
   return (
     <div className="App">
       <ScrollToTop />
       <Header />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/roadmap" element={<Roadmap />} />
-        <Route path="/skills" element={<Skills />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/articles" element={<Articles />} />
+        <Route path="/" element={<MainPage />} />
         
+
         <Route path="/slaccounting" element={<Slaccounting />} />
         <Route path="/healthbridge" element={<Healthbridge />} />
         <Route path="/learnbridge" element={<Learnbridge />} />

@@ -2,7 +2,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Rocket, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import Footer from "../components/footer";
 
 const projects = [
   {
@@ -87,26 +86,14 @@ const projects = [
 
 const Projects = () => {
   return (
-    <div className="relative min-h-screen font-inter overflow-hidden text-white">
-      {/* Background with animation */}
-      <motion.div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url('/backgroundhero.jpg')` }}
-        initial={{ scale: 1.1 }}
-        animate={{ scale: 1 }}
-        transition={{
-          duration: 30,
-          repeat: Infinity,
-          repeatType: "reverse",
-          ease: "easeInOut",
-        }}
-      />
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0D1117]/90 to-[#161B22]/95" />
+    <div className="relative  font-inter overflow-hidden text-white">
+      
+      
 
       {/* Main Content */}
       <section
         id="projects"
-        className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 md:px-6 py-24 mt-10"
+        className="relative z-10 scroll-mt-28 md:scroll-mt-32 flex flex-col items-center justify-center  px-4 md:px-6 py-16 md:py-24 mt-6 md:mt-10"
       >
         <div className="w-full max-w-7xl mx-auto">
           <motion.div 
@@ -133,7 +120,7 @@ const Projects = () => {
                 {/* Glowing background blob */}
                 <div className={`absolute -right-20 -top-20 w-56 h-56 bg-gradient-to-br ${project.color} opacity-0 group-hover:opacity-15 rounded-full blur-[60px] transition-opacity duration-700 pointer-events-none`} />
 
-                <div className="relative z-10 flex flex-col flex-grow">
+                <div className="relative z-10 scroll-mt-28 md:scroll-mt-32 flex flex-col flex-grow">
                   <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${project.color} p-4 flex items-center justify-center shadow-lg mb-8 transform group-hover:scale-110 transition-transform duration-500 text-white`}>
                     <Rocket className="w-8 h-8" />
                   </div>
@@ -159,7 +146,7 @@ const Projects = () => {
         </div>
       </section>
 
-      <Footer />
+      
     </div>
   );
 };

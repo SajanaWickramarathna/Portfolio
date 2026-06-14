@@ -7,7 +7,6 @@ import {
   SiTailwindcss, SiMongodb, SiMysql, SiExpress, SiFigma, SiKotlin,
 } from "react-icons/si";
 
-import Footer from "../components/footer";
 
 const skills = [
   {
@@ -66,28 +65,15 @@ const skills = [
 
 const SkillTree = () => {
   return (
-    <div className="relative min-h-screen font-inter overflow-hidden text-white">
-      {/* Background with animation */}
-      <motion.div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url('/backgroundhero.jpg')` }}
-        initial={{ scale: 1.1 }}
-        animate={{ scale: 1 }}
-        transition={{
-          duration: 30,
-          repeat: Infinity,
-          repeatType: "reverse",
-          ease: "easeInOut",
-        }}
-      />
+    <div className="relative  font-inter overflow-hidden text-white">
+      
 
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0D1117]/90 to-[#161B22]/95" />
+      
 
       {/* Content */}
       <section
         id="skills"
-        className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 md:px-6 py-24 mt-10"
+        className="relative z-10 scroll-mt-28 md:scroll-mt-32 flex flex-col items-center justify-center  px-4 md:px-6 py-16 md:py-24 mt-6 md:mt-10"
       >
         <div className="w-full max-w-6xl mx-auto">
           <motion.div 
@@ -138,7 +124,7 @@ const SkillTree = () => {
         </div>
       </section>
 
-      <Footer />
+      
     </div>
   );
 };

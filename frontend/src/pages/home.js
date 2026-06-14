@@ -12,7 +12,6 @@ import {
   FaServer,
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import Footer from "../components/footer";
 import saj from "../assets/saj.png";
 import { useNavigate } from "react-router-dom";
 
@@ -167,28 +166,15 @@ const Hero = () => {
   const [tooltip, setTooltip] = useState(null);
 
   return (
-     <div className="relative min-h-screen font-inter overflow-hidden text-white">
+     <div className="relative  font-inter overflow-hidden text-white">
 
-      {/* Background with animation */}
-      <motion.div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url('/backgroundhero.jpg')` }}
-        initial={{ scale: 1.1 }}
-        animate={{ scale: 1 }}
-        transition={{
-          duration: 30,
-          repeat: Infinity,
-          repeatType: "reverse",
-          ease: "easeInOut",
-        }}
-      />
+      
 
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0D1117]/90 to-[#161B22]/95" />
+      
 
       {/* ── Main section ─────────────────────────────────────────────── */}
       <section
-        className="relative z-10 flex items-center justify-center min-h-screen px-6 pt-36 pb-20 mt-8"
+        className="relative z-10 scroll-mt-28 md:scroll-mt-32 flex items-center justify-center  px-6 pt-36 pb-20 mt-8"
         id="home"
       >
         <div className="container mx-auto max-w-7xl flex flex-col lg:flex-row items-center justify-between gap-16">
@@ -293,7 +279,10 @@ const Hero = () => {
               transition={{ delay: 0.85 }}
             >
               <motion.button
-                onClick={() => navigate("/contact")}
+                onClick={() => {
+                  const el = document.getElementById("contact");
+                  if (el) el.scrollIntoView({ behavior: "smooth" });
+                }}
                 className="relative group px-7 py-3 rounded-full font-semibold text-sm overflow-hidden shadow-lg"
                 style={{
                   background:
@@ -308,7 +297,10 @@ const Hero = () => {
               </motion.button>
 
               <motion.button
-                onClick={() => navigate("/projects")}
+                onClick={() => {
+                  const el = document.getElementById("projects");
+                  if (el) el.scrollIntoView({ behavior: "smooth" });
+                }}
                 className="px-7 py-3 rounded-full font-semibold text-sm border border-[#58A6FF]/50 text-[#58A6FF] hover:bg-[#58A6FF]/10 transition-all duration-300 backdrop-blur-sm"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -394,28 +386,7 @@ const Hero = () => {
         </div>
       </section>
 
-      {/* ── Scroll indicator ─────────────────────────────────────────── */}
-      <motion.div
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-10"
-        initial={{ opacity: 0, y: -10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1.4, duration: 0.6 }}
-      >
-        <span className="text-[#8B949E] text-[10px] tracking-widest uppercase font-semibold">
-          Scroll
-        </span>
-        <motion.div
-          className="w-5 h-8 rounded-full border border-[#30363D] flex items-start justify-center pt-1.5"
-          animate={{ borderColor: ["#30363D", "#58A6FF", "#30363D"] }}
-          transition={{ duration: 2, repeat: Infinity }}
-        >
-          <motion.div
-            className="w-1 h-1.5 rounded-full bg-[#58A6FF]"
-            animate={{ y: [0, 12, 0] }}
-            transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-          />
-        </motion.div>
-      </motion.div>
+      
 
       {/* ── Stats section ────────────────────────────────────────────── */}
       <motion.section
@@ -468,7 +439,7 @@ const Hero = () => {
         </div>
       </motion.section>
 
-      <Footer />
+      
     </div>
   );
 };
