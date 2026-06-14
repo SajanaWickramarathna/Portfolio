@@ -1,12 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
 import {
-  FaHtml5, FaCss3Alt, FaPhp, FaJs, FaJava, FaReact, FaNodeJs, FaPython,
+  FaHtml5, FaCss3Alt, FaPhp, FaJs, FaJava, FaReact, FaNodeJs, FaPython, FaLaravel, FaRobot, FaGlobe
 } from "react-icons/fa";
 import {
-  SiTailwindcss, SiMongodb, SiMysql, SiExpress, SiFigma, SiKotlin,
+  SiTailwindcss, SiMongodb, SiMysql, SiExpress, SiFigma, SiKotlin, SiTypescript, SiFirebase, SiPostgresql, SiDocker, SiKubernetes, SiPostman, SiJira, SiGit, SiAdobephotoshop, SiAstro
 } from "react-icons/si";
-
+import { VscVscode } from "react-icons/vsc"; 
 
 const skills = [
   {
@@ -20,6 +20,8 @@ const skills = [
       { name: "JavaScript", icon: <FaJs /> },
       { name: "React.js", icon: <FaReact /> },
       { name: "Tailwind CSS", icon: <SiTailwindcss /> },
+      { name: "TypeScript", icon: <SiTypescript /> },
+      { name: "Astro", icon: <SiAstro /> },
     ],
   },
   {
@@ -32,6 +34,7 @@ const skills = [
       { name: "Express.js", icon: <SiExpress /> },
       { name: "PHP", icon: <FaPhp /> },
       { name: "Python", icon: <FaPython /> },
+      { name: "Laravel", icon: <FaLaravel /> },
     ],
   },
   {
@@ -42,6 +45,8 @@ const skills = [
     items: [
       { name: "MongoDB", icon: <SiMongodb /> },
       { name: "MySQL", icon: <SiMysql /> },
+      { name: "Firebase", icon: <SiFirebase /> },
+      { name: "PostgreSQL", icon: <SiPostgresql /> },
     ],
   },
   {
@@ -49,7 +54,11 @@ const skills = [
     glow: "from-[#A371F7]/20 to-[#8957E5]/20",
     border: "group-hover:border-[#A371F7]/50",
     text: "text-[#A371F7]",
-    items: [{ name: "Kotlin", icon: <SiKotlin /> }],
+    items: [
+      { name: "Kotlin", icon: <SiKotlin /> },
+      { name: "Web View", icon: <FaGlobe /> },
+    ],
+    
   },
   {
     category: "Other Tools",
@@ -59,17 +68,21 @@ const skills = [
     items: [
       { name: "Figma", icon: <SiFigma /> },
       { name: "Java", icon: <FaJava /> },
+      { name: "Git", icon: <SiGit /> },
+      { name: "Docker", icon: <SiDocker /> },
+      { name: "Kubernetes", icon: <SiKubernetes /> },
+      { name: "Postman", icon: <SiPostman /> },
+      { name: "Jira", icon: <SiJira /> },
+      { name: "VS Code", icon: <VscVscode /> },
+      { name: "Photoshop", icon: <SiAdobephotoshop /> }, 
+      { name: "AI Tools", icon: <FaRobot /> },
     ],
   },
 ];
 
 const SkillTree = () => {
   return (
-    <div className="relative  font-inter overflow-hidden text-white">
-      
-
-      
-
+    <div className="relative font-inter overflow-hidden text-white">
       {/* Content */}
       <section
         id="skills"
@@ -123,8 +136,6 @@ const SkillTree = () => {
           </div>
         </div>
       </section>
-
-      
     </div>
   );
 };
