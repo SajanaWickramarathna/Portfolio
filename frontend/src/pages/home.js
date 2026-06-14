@@ -66,7 +66,7 @@ const stats = [
   { value: 15, label: "Projects Built", suffix: "+" },
   { value: 3, label: "Years Learning", suffix: "+" },
   { value: 10, label: "Technologies", suffix: "+" },
-  { value: 100, label: "Commits", suffix: "+" },
+  { value: 800, label: "Commits", suffix: "+" },
 ];
 
 /* ─── Tech stack chips ──────────────────────────────────────────────── */
@@ -174,7 +174,7 @@ const Hero = () => {
 
       {/* ── Main section ─────────────────────────────────────────────── */}
       <section
-        className="relative z-10 scroll-mt-20 md:scroll-mt-24 flex items-center justify-center  px-6 pt-28 pb-16"
+        className="relative z-10 scroll-mt-20 md:scroll-mt-24 flex items-center justify-center  px-6 pt-36 md:pt-40 pb-16"
         id="home"
       >
         <div className="container mx-auto max-w-7xl flex flex-col lg:flex-row items-center justify-between gap-16">
