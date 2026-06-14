@@ -67,8 +67,8 @@ const stats = [
 
 /* ─── Tech stack chips ──────────────────────────────────────────────── */
 const techStack = [
-  "React", "Node.js", "TypeScript", "MongoDB",
-  "Tailwind CSS", "Express", "Firebase", "Figma",
+  "React", "Node.js", "Java", "Kotlin", "MongoDB", "MySQL",
+  "Tailwind CSS", "Express", "Firebase", "Figma", "JavaScript", "TypeScript", "Laravel"
 ];
 
 /* ─── Typewriter hook ───────────────────────────────────────────────── */

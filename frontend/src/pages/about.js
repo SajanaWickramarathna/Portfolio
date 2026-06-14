@@ -1,11 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom";
 import { User, Code2, GraduationCap, MapPin, Briefcase, Download } from "lucide-react";
 const Cv = "/CV.pdf";
 
 const About = () => {
-  const navigate = useNavigate();
 
   return (
     <div className="relative  font-inter overflow-hidden text-white">
@@ -94,7 +92,7 @@ const About = () => {
                     Hi! I'm a passionate developer who thrives on creating <span className="text-white font-medium">performant, engaging applications</span>. My journey in tech started with a profound curiosity about how things work under the hood, which naturally led me to software engineering.
                   </p>
                   <p>
-                    Today, I specialize in the <span className="text-[#A371F7] font-medium">MERN stack</span> and have hands-on experience building full-stack web platforms, Android apps, and scalable telemedicine solutions. 
+                    Today, I specialize in full-stack development using the <span className="text-[#A371F7] font-medium">MERN stack (JavaScript/TypeScript)</span> and mobile development using <span className="text-[#58A6FF] font-medium">Java and Kotlin</span>. I have hands-on experience building full-stack web platforms, Android apps, and scalable telemedicine solutions. 
                   </p>
                   <p>
                     Whether I'm crafting an intuitive UI in <span className="text-white font-medium">Figma</span> or architecting a robust backend in <span className="text-[#3FB950] font-medium">Node.js</span>, I bring a detail-oriented and collaborative approach to every project. I love tackling challenging projects and continuously growing as a tech professional.
@@ -104,7 +102,7 @@ const About = () => {
 
               <div className="flex flex-col sm:flex-row gap-5">
                 <button
-                  onClick={() => navigate("/projects")}
+                  onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })}
                   className="flex-1 flex items-center justify-center gap-3 bg-gradient-to-r from-[#58A6FF] to-[#3182CE] hover:from-[#3182CE] hover:to-[#58A6FF] text-white font-bold px-8 py-5 rounded-2xl shadow-[0_0_20px_rgba(88,166,255,0.3)] hover:shadow-[0_0_30px_rgba(88,166,255,0.5)] transition-all duration-300 transform hover:-translate-y-1 text-lg"
                 >
                   <Code2 className="w-6 h-6" /> View My Work
