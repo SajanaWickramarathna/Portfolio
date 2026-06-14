@@ -56,7 +56,7 @@ const Contact = () => (
         >
           {/* Email Card */}
           <a href="mailto:sajanawickramarathhna143@gmail.com" className="group block">
-            <div className="bg-[#161B22]/60 backdrop-blur-xl border border-white/10 p-6 rounded-2xl flex items-center gap-6 hover:bg-[#58A6FF]/10 hover:border-[#58A6FF]/30 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-[0_10px_20px_rgba(88,166,255,0.1)]">
+            <div className="bg-white/[0.02] backdrop-blur-sm border border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.36)] p-6 rounded-2xl flex items-center gap-6 hover:bg-[#58A6FF]/10 hover:border-[#58A6FF]/30 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-[0_10px_20px_rgba(88,166,255,0.1)]">
               <div className="w-12 h-12 rounded-full bg-[#0D1117] border border-white/10 flex items-center justify-center text-[#58A6FF] group-hover:bg-[#58A6FF] group-hover:text-white transition-colors duration-300">
                 <FaEnvelope size={20} />
               </div>
@@ -69,7 +69,7 @@ const Contact = () => (
 
           {/* Location Card */}
           <div className="group block cursor-default">
-            <div className="bg-[#161B22]/60 backdrop-blur-xl border border-white/10 p-6 rounded-2xl flex items-center gap-6 hover:bg-[#A371F7]/10 hover:border-[#A371F7]/30 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-[0_10px_20px_rgba(163,113,247,0.1)]">
+            <div className="bg-white/[0.02] backdrop-blur-sm border border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.36)] p-6 rounded-2xl flex items-center gap-6 hover:bg-[#A371F7]/10 hover:border-[#A371F7]/30 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-[0_10px_20px_rgba(163,113,247,0.1)]">
               <div className="w-12 h-12 rounded-full bg-[#0D1117] border border-white/10 flex items-center justify-center text-[#A371F7] group-hover:bg-[#A371F7] group-hover:text-white transition-colors duration-300">
                 <FaMapMarkerAlt size={20} />
               </div>
@@ -82,7 +82,7 @@ const Contact = () => (
 
           {/* Phone Card */}
           <a href="tel:+94701422030" className="group block">
-            <div className="bg-[#161B22]/60 backdrop-blur-xl border border-white/10 p-6 rounded-2xl flex items-center gap-6 hover:bg-[#3FB950]/10 hover:border-[#3FB950]/30 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-[0_10px_20px_rgba(63,185,80,0.1)]">
+            <div className="bg-white/[0.02] backdrop-blur-sm border border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.36)] p-6 rounded-2xl flex items-center gap-6 hover:bg-[#3FB950]/10 hover:border-[#3FB950]/30 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-[0_10px_20px_rgba(63,185,80,0.1)]">
               <div className="w-12 h-12 rounded-full bg-[#0D1117] border border-white/10 flex items-center justify-center text-[#3FB950] group-hover:bg-[#3FB950] group-hover:text-white transition-colors duration-300">
                 <FaPhone size={20} />
               </div>
@@ -96,13 +96,13 @@ const Contact = () => (
           {/* Social Row */}
           <div className="flex gap-4 mt-2">
             <a href="https://github.com/SajanaWickramarathna" target="_blank" rel="noopener noreferrer" className="flex-1 group">
-              <div className="bg-[#161B22]/60 backdrop-blur-xl border border-white/10 p-4 rounded-2xl flex items-center justify-center gap-3 hover:bg-white/10 transition-all duration-300 transform hover:-translate-y-1">
+              <div className="bg-white/[0.02] backdrop-blur-sm border border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.36)] p-4 rounded-2xl flex items-center justify-center gap-3 hover:bg-white/10 transition-all duration-300 transform hover:-translate-y-1">
                 <FaGithub className="text-white text-xl" />
                 <span className="text-white font-medium">GitHub</span>
               </div>
             </a>
             <a href="https://www.linkedin.com/in/sajana-wickramarathna-a4b4062b6/" target="_blank" rel="noopener noreferrer" className="flex-1 group">
-              <div className="bg-[#161B22]/60 backdrop-blur-xl border border-white/10 p-4 rounded-2xl flex items-center justify-center gap-3 hover:bg-[#0077B5]/20 hover:border-[#0077B5]/50 transition-all duration-300 transform hover:-translate-y-1">
+              <div className="bg-white/[0.02] backdrop-blur-sm border border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.36)] p-4 rounded-2xl flex items-center justify-center gap-3 hover:bg-[#0077B5]/20 hover:border-[#0077B5]/50 transition-all duration-300 transform hover:-translate-y-1">
                 <FaLinkedin className="text-[#0077B5] text-xl group-hover:text-white transition-colors" />
                 <span className="text-white font-medium">LinkedIn</span>
               </div>

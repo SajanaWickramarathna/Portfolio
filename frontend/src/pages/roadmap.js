@@ -125,11 +125,11 @@ const Roadmap = () => {
                   viewport={{ once: true, margin: "-100px" }}
                 >
                   {/* Timeline Node / Dot */}
-                  <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-[#161B22] border-4 border-[#58A6FF] items-center justify-center z-20 shadow-[0_0_20px_rgba(88,166,255,0.6)]">
+                  <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-white/[0.02] backdrop-blur-sm border-4 border-[#58A6FF] items-center justify-center z-20 shadow-[0_0_20px_rgba(88,166,255,0.6)]">
                     <div className={`w-2 h-2 rounded-full ${isFuture ? 'bg-[#F78166] animate-pulse' : 'bg-[#58A6FF]'}`} />
                   </div>
 
-                  <div className={`w-full md:w-[45%] ${isFuture ? 'bg-gradient-to-r from-[#F78166]/10 to-[#FF9E7D]/10 border-[#F78166]/40' : 'bg-[#161B22]/60 border-white/10'} backdrop-blur-xl p-8 rounded-3xl border shadow-xl hover:shadow-[0_0_30px_rgba(88,166,255,0.15)] transition-all duration-500 relative group overflow-hidden`}>
+                  <div className={`w-full md:w-[45%] ${isFuture ? 'bg-gradient-to-r from-[#F78166]/10 to-[#FF9E7D]/10 border-[#F78166]/40' : 'bg-white/[0.02] backdrop-blur-sm border-white/10'} backdrop-blur-sm p-8 rounded-3xl border shadow-xl hover:shadow-[0_0_30px_rgba(88,166,255,0.15)] transition-all duration-500 relative group overflow-hidden`}>
                     
                     {/* Hover Glow */}
                     <div className="absolute -right-20 -top-20 w-48 h-48 bg-[#58A6FF]/20 opacity-0 group-hover:opacity-100 rounded-full blur-[60px] transition-opacity duration-700 pointer-events-none" />
@@ -146,7 +146,7 @@ const Roadmap = () => {
                           {item.frontend.map((tech, i) => (
                             <span
                               key={i}
-                              className="flex items-center gap-2 px-3 py-1.5 bg-[#0D1117]/80 border border-white/5 text-sm rounded-full shadow hover:border-white/20 transition-all text-[#C9D1D9]"
+                              className="flex items-center gap-2 px-3 py-1.5 bg-white/[0.02] backdrop-blur-sm border border-white/5 text-sm rounded-full shadow hover:border-white/20 transition-all text-[#C9D1D9]"
                             >
                               {tech.icon} {tech.name}
                             </span>
@@ -162,7 +162,7 @@ const Roadmap = () => {
                           {item.backend.map((tech, i) => (
                             <span
                               key={i}
-                              className="flex items-center gap-2 px-3 py-1.5 bg-[#0D1117]/80 border border-white/5 text-sm rounded-full shadow hover:border-white/20 transition-all text-[#C9D1D9]"
+                              className="flex items-center gap-2 px-3 py-1.5 bg-white/[0.02] backdrop-blur-sm border border-white/5 text-sm rounded-full shadow hover:border-white/20 transition-all text-[#C9D1D9]"
                             >
                               {tech.icon} {tech.name}
                             </span>

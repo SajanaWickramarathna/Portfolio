@@ -92,7 +92,7 @@ const SkillTree = () => {
             {skills.map((section, index) => (
               <motion.div
                 key={index}
-                className={`group relative bg-[#161B22]/60 backdrop-blur-xl p-8 rounded-3xl border border-white/10 transition-all duration-500 hover:shadow-2xl ${section.border} overflow-hidden`}
+                className={`group relative bg-white/[0.02] backdrop-blur-sm p-8 rounded-3xl border border-white/10 transition-all duration-500 hover:shadow-2xl ${section.border} overflow-hidden`}
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -110,7 +110,7 @@ const SkillTree = () => {
                       <motion.div
                         key={i}
                         whileHover={{ scale: 1.05, y: -2 }}
-                        className="flex items-center gap-2 px-4 py-2.5 bg-[#0D1117]/80 backdrop-blur-md border border-white/5 text-sm rounded-full shadow-lg hover:border-white/20 transition-all duration-300"
+                        className="flex items-center gap-2 px-4 py-2.5 bg-white/[0.02] backdrop-blur-sm border border-white/5 text-sm rounded-full shadow-lg hover:border-white/20 transition-all duration-300"
                       >
                         <span className={`text-lg ${section.text}`}>{skill.icon}</span>
                         <span className="text-[#C9D1D9] font-medium">{skill.name}</span>

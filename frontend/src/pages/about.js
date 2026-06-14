@@ -37,7 +37,7 @@ const About = () => {
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
-              className="lg:col-span-5 w-full bg-[#161B22]/60 backdrop-blur-2xl border border-white/10 rounded-3xl p-8 md:p-10 relative overflow-hidden group hover:border-white/20 transition-colors duration-500 flex flex-col justify-center shadow-lg hover:shadow-2xl"
+              className="lg:col-span-5 w-full bg-white/[0.02] backdrop-blur-sm border border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.36)] rounded-3xl p-8 md:p-10 relative overflow-hidden group hover:border-white/20 transition-colors duration-500 flex flex-col justify-center shadow-lg hover:shadow-2xl"
             >
               <div className="absolute -left-20 -top-20 w-64 h-64 bg-gradient-to-br from-[#58A6FF] to-[#3182CE] opacity-10 group-hover:opacity-20 rounded-full blur-[80px] pointer-events-none transition-transform duration-700 group-hover:scale-150" />
               
@@ -50,19 +50,19 @@ const About = () => {
                 <p className="text-[#58A6FF] text-center font-medium mb-10 text-lg">Software Engineering Undergraduate</p>
                 
                 <div className="space-y-4">
-                  <div className="flex items-center gap-5 text-[#C9D1D9] bg-[#0D1117]/80 p-5 rounded-2xl border border-white/5 hover:border-white/20 hover:bg-[#0D1117] transition-all">
+                  <div className="flex items-center gap-5 text-[#C9D1D9] bg-white/[0.02] backdrop-blur-sm p-5 rounded-2xl border border-white/5 hover:border-white/20 hover:bg-[#0D1117] transition-all">
                     <div className="p-2 bg-[#58A6FF]/10 rounded-xl">
                       <GraduationCap className="w-6 h-6 text-[#58A6FF]" />
                     </div>
                     <span className="text-sm font-medium">BSc IT (Spec. Software Engineering) at SLIIT</span>
                   </div>
-                  <div className="flex items-center gap-5 text-[#C9D1D9] bg-[#0D1117]/80 p-5 rounded-2xl border border-white/5 hover:border-white/20 hover:bg-[#0D1117] transition-all">
+                  <div className="flex items-center gap-5 text-[#C9D1D9] bg-white/[0.02] backdrop-blur-sm p-5 rounded-2xl border border-white/5 hover:border-white/20 hover:bg-[#0D1117] transition-all">
                     <div className="p-2 bg-[#F78166]/10 rounded-xl">
                       <Code2 className="w-6 h-6 text-[#F78166]" />
                     </div>
                     <span className="text-sm font-medium">Full Stack Web & Mobile Developer</span>
                   </div>
-                  <div className="flex items-center gap-5 text-[#C9D1D9] bg-[#0D1117]/80 p-5 rounded-2xl border border-white/5 hover:border-white/20 hover:bg-[#0D1117] transition-all">
+                  <div className="flex items-center gap-5 text-[#C9D1D9] bg-white/[0.02] backdrop-blur-sm p-5 rounded-2xl border border-white/5 hover:border-white/20 hover:bg-[#0D1117] transition-all">
                     <div className="p-2 bg-[#3FB950]/10 rounded-xl">
                       <MapPin className="w-6 h-6 text-[#3FB950]" />
                     </div>
@@ -79,7 +79,7 @@ const About = () => {
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
               className="lg:col-span-7 flex flex-col justify-between"
             >
-              <div className="bg-[#161B22]/60 backdrop-blur-xl border border-white/10 rounded-3xl p-8 md:p-12 mb-8 shadow-lg relative overflow-hidden flex-grow group hover:border-white/20 transition-all duration-500">
+              <div className="bg-white/[0.02] backdrop-blur-sm border border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.36)] rounded-3xl p-8 md:p-12 mb-8 shadow-lg relative overflow-hidden flex-grow group hover:border-white/20 transition-all duration-500">
                 <div className="absolute -right-20 -bottom-20 w-64 h-64 bg-gradient-to-tl from-[#A371F7] to-[#8957E5] opacity-10 group-hover:opacity-20 rounded-full blur-[80px] pointer-events-none transition-transform duration-700 group-hover:scale-150" />
                 
                 <h3 className="text-2xl md:text-3xl font-bold text-white mb-8 flex items-center gap-4">
@@ -111,7 +111,7 @@ const About = () => {
                 </button>
                 <a
                   href={Cv}
-                  className="flex-1 flex items-center justify-center gap-3 bg-[#0D1117]/80 backdrop-blur-xl border border-white/10 text-white hover:bg-white/10 hover:border-white/20 font-bold px-8 py-5 rounded-2xl transition-all duration-300 transform hover:-translate-y-1 text-lg shadow-lg"
+                  className="flex-1 flex items-center justify-center gap-3 bg-white/[0.02] backdrop-blur-sm border border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.36)] text-white hover:bg-white/10 hover:border-white/20 font-bold px-8 py-5 rounded-2xl transition-all duration-300 transform hover:-translate-y-1 text-lg shadow-lg"
                   download
                 >
                   <Download className="w-6 h-6" /> Download CV

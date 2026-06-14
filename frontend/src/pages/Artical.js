@@ -82,7 +82,7 @@ const Articles = () => {
                 className={`px-6 py-3 rounded-2xl font-semibold flex items-center gap-3 transition-all duration-300 text-sm shadow-lg ${
                   activeTab === tab.id
                     ? "bg-gradient-to-r from-[#58A6FF] to-[#3182CE] text-white border border-[#58A6FF]/50 shadow-[0_0_20px_rgba(88,166,255,0.4)]"
-                    : "bg-[#161B22]/80 backdrop-blur-xl border border-white/10 text-[#C9D1D9] hover:border-white/20 hover:text-white"
+                    : "bg-white/[0.02] backdrop-blur-sm border border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.36)] text-[#C9D1D9] hover:border-white/20 hover:text-white"
                 }`}
               >
                 {tab.icon}
@@ -100,7 +100,7 @@ const Articles = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: (index % 6) * 0.1 }}
                 layout
-                className="group relative bg-[#161B22]/60 backdrop-blur-xl border border-white/10 p-8 md:p-10 rounded-3xl overflow-hidden hover:border-white/20 transition-all duration-500 shadow-lg hover:shadow-2xl flex flex-col"
+                className="group relative bg-white/[0.02] backdrop-blur-sm border border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.36)] p-8 md:p-10 rounded-3xl overflow-hidden hover:border-white/20 transition-all duration-500 shadow-lg hover:shadow-2xl flex flex-col"
               >
                 {/* Glowing background blob */}
                 <div className={`absolute -right-20 -top-20 w-56 h-56 bg-gradient-to-br ${article.color} opacity-0 group-hover:opacity-15 rounded-full blur-[60px] transition-opacity duration-700 pointer-events-none`} />
@@ -122,7 +122,7 @@ const Articles = () => {
                     href={article.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-auto w-full inline-flex items-center justify-center gap-2 py-4 bg-[#0D1117]/50 border border-white/10 hover:bg-white/5 text-white font-semibold rounded-xl transition-all duration-300 text-sm tracking-wide group-hover:border-white/20"
+                    className="mt-auto w-full inline-flex items-center justify-center gap-2 py-4 bg-white/[0.02] backdrop-blur-sm border border-white/10 shadow-lg hover:bg-white/[0.02] text-white font-semibold rounded-xl transition-all duration-300 text-sm tracking-wide group-hover:border-white/20"
                   >
                     Read on {article.platformName} <ChevronRight className="w-4 h-4" />
                   </a>
@@ -138,7 +138,7 @@ const Articles = () => {
               animate={{ opacity: 1 }}
               className="text-center py-20"
             >
-              <div className="inline-flex items-center justify-center w-20 h-20 bg-white/5 rounded-full mb-6">
+              <div className="inline-flex items-center justify-center w-20 h-20 bg-white/[0.02] rounded-full mb-6">
                 <FileText className="w-10 h-10 text-[#8B949E]" />
               </div>
               <p className="text-[#C9D1D9] text-xl font-medium">
@@ -163,7 +163,7 @@ const Articles = () => {
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-[#161B22]/60 backdrop-blur-xl border border-white/10 rounded-2xl hover:border-[#10B981]/50 transition-all flex items-center gap-3 text-[#C9D1D9] hover:text-[#10B981] font-medium shadow-lg hover:shadow-[0_0_20px_rgba(16,185,129,0.2)]"
+                className="px-8 py-4 bg-white/[0.02] backdrop-blur-sm border border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.36)] rounded-2xl hover:border-[#10B981]/50 transition-all flex items-center gap-3 text-[#C9D1D9] hover:text-[#10B981] font-medium shadow-lg hover:shadow-[0_0_20px_rgba(16,185,129,0.2)]"
               >
                 <FaMedium size={24} />
                 <span>Follow on Medium</span>
@@ -174,7 +174,7 @@ const Articles = () => {
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-[#161B22]/60 backdrop-blur-xl border border-white/10 rounded-2xl hover:border-[#3B82F6]/50 transition-all flex items-center gap-3 text-[#C9D1D9] hover:text-[#3B82F6] font-medium shadow-lg hover:shadow-[0_0_20px_rgba(59,130,246,0.2)]"
+                className="px-8 py-4 bg-white/[0.02] backdrop-blur-sm border border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.36)] rounded-2xl hover:border-[#3B82F6]/50 transition-all flex items-center gap-3 text-[#C9D1D9] hover:text-[#3B82F6] font-medium shadow-lg hover:shadow-[0_0_20px_rgba(59,130,246,0.2)]"
               >
                 <SiBehance size={24} />
                 <span>Follow on Behance</span>

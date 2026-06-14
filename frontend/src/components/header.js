@@ -44,7 +44,7 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-4 sm:top-6 left-1/2 transform -translate-x-1/2 z-50 w-[95%] max-w-7xl px-4 sm:px-8 py-3 sm:py-4 bg-[#0D1117]/70 backdrop-blur-lg rounded-2xl border border-[#30363D] shadow-xl">
+    <header className="fixed top-4 sm:top-6 left-1/2 transform -translate-x-1/2 z-50 w-[95%] max-w-7xl px-4 sm:px-8 py-3 sm:py-4 bg-white/[0.02] backdrop-blur-sm rounded-2xl border border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.36)]">
       <div className="flex justify-between items-center w-full">
         {/* Logo */}
         <motion.div
@@ -117,7 +117,7 @@ const Header = () => {
       <AnimatePresence>
         {isMobileOpen && (
           <motion.div
-            className="lg:hidden mt-4 px-4 py-6 bg-[#161B22] border border-[#30363D] rounded-xl shadow-xl space-y-4"
+            className="lg:hidden mt-4 px-4 py-6 bg-[#000000]/40 backdrop-blur-3xl border border-white/10 rounded-xl shadow-[0_8px_32px_0_rgba(0,0,0,0.36)] space-y-4"
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
@@ -128,8 +128,8 @@ const Header = () => {
                 onClick={() => handleScrollTo(id)}
                 className={`block w-full text-left text-sm font-medium px-3 py-2 rounded-md transition-all ${
                   activeSection === id
-                    ? "bg-[#21262D] text-[#58A6FF]"
-                    : "text-[#C9D1D9] hover:text-[#8B949E]"
+                    ? "bg-white/10 text-white"
+                    : "text-[#C9D1D9] hover:text-white"
                 }`}
               >
                 {name}

@@ -260,7 +260,7 @@ const Hero = () => {
               {techStack.map((tech, i) => (
                 <motion.span
                   key={tech}
-                  className="px-3 py-1 text-xs font-medium rounded-full border border-[#30363D] bg-[#161B22] text-[#8B949E] hover:border-[#58A6FF]/50 hover:text-[#58A6FF] transition-all duration-300 cursor-default"
+                  className="px-3 py-1 text-xs font-medium rounded-full border border-white/10 bg-white/[0.02] text-[#8B949E] hover:border-[#58A6FF]/50 hover:text-[#58A6FF] transition-all duration-300 cursor-default"
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 0.8 + i * 0.05 }}
@@ -322,7 +322,7 @@ const Hero = () => {
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center w-9 h-9 rounded-full border border-[#30363D] bg-[#161B22]/80 text-[#8B949E] hover:border-transparent transition-all duration-300"
+                    className="flex items-center justify-center w-9 h-9 rounded-full border border-white/10 bg-white/[0.02] text-[#8B949E] hover:border-transparent transition-all duration-300 shadow-[0_4px_16px_0_rgba(0,0,0,0.2)]"
                     style={{
                       "--hover-color": social.color,
                     }}
@@ -409,7 +409,7 @@ const Hero = () => {
             {stats.map(({ value, label, suffix }, i) => (
               <motion.div
                 key={label}
-                className="relative group rounded-2xl border border-[#30363D] bg-[#0D1117]/60 backdrop-blur-sm px-5 py-6 text-center overflow-hidden cursor-default"
+                className="relative group rounded-2xl border border-white/10 bg-white/[0.02] backdrop-blur-sm shadow-[0_8px_32px_0_rgba(0,0,0,0.36)] px-5 py-6 text-center overflow-hidden cursor-default"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1.2 + i * 0.1 }}
