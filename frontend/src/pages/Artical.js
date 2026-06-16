@@ -31,6 +31,18 @@ const Articles = () => {
       icon: <PenTool className="w-8 h-8" />,
       color: "from-[#3B82F6] to-[#1D4ED8]", // Behance Blue
     },
+    {
+      id: 3,
+      title: "Monolithic vs Microservices: Trade-offs Every Software Engineer Should Know",
+      description:
+        "An in-depth article exploring the trade-offs between monolithic and microservices architectures, helping software engineers make informed decisions for their projects.",
+      platform: "medium",
+      platformName: "Medium",
+      url: "https://medium.com/@sajanawickramarathna143/monolithic-vs-microservices-trade-offs-every-software-engineer-should-know-1e7925f97206",
+      icon: <FileText className="w-8 h-8" />,
+      color: "from-[#10B981] to-[#047857]", // Medium Green
+    }
+
   ];
 
   const filteredArticles =
