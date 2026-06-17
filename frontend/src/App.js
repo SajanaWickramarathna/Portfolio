@@ -19,6 +19,7 @@ import Pcify from './Projects/pcify.js';
 import Kasss from './Projects/kasss.js';
 import Cleanwave from './Projects/cleanwave.js';
 import Portfolio from './Projects/portfolio.js';
+import PowerTap from './Projects/powertap.js';
 
 import MainPage from './pages/MainPage.js';
 import ParticleBackground from './components/ParticleBackground.js';
@@ -46,6 +47,7 @@ function App() {
         <Route path="/kasss" element={<Kasss />} />
         <Route path="/cleanwave" element={<Cleanwave />} />
         <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/powertap" element={<PowerTap />} />
       </Routes>
     </div>
   );

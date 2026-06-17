@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { 
   ChevronRight, BookOpen, Heart, GraduationCap, 
   Truck, ShoppingCart, Users, Calendar, Settings, 
-  Wallet, Cpu, Megaphone, Droplets, Briefcase 
+  Wallet, Cpu, Megaphone, Droplets, Briefcase, Download, Power
 } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -98,6 +98,14 @@ const projects = [
     link: "/portfolio",
     color: "from-[#A371F7] to-[#8957E5]",
     icon: Briefcase
+  },
+  {
+    title: "PC Shut Down (Power Tap)",
+    description: "Remote PC shutdown app allowing users to turn off their computer directly from their Android mobile device.",
+    link: "/powertap",
+    color: "from-[#E3B341] to-[#D29922]",
+    icon: Power,
+    isDownloadable: true
   }
 ];
 
@@ -154,7 +162,15 @@ const Projects = () => {
                     to={project.link}
                     className="mt-auto w-full inline-flex items-center justify-center gap-2 py-4 bg-white/[0.02] backdrop-blur-sm border border-white/10 shadow-lg hover:bg-white/[0.02] text-white font-semibold rounded-xl transition-all duration-300 text-sm tracking-wide group-hover:border-white/20"
                   >
-                    View Project <ChevronRight className="w-4 h-4" />
+                    {project.isDownloadable ? (
+                      <span className="flex items-center gap-2 text-[#E3B341]">
+                        Download Here <Download className="w-4 h-4" />
+                      </span>
+                    ) : (
+                      <span className="flex items-center gap-2">
+                        View Project <ChevronRight className="w-4 h-4" />
+                      </span>
+                    )}
                   </Link>
                 </div>
               </motion.div>
