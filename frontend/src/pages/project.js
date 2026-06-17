@@ -100,7 +100,7 @@ const projects = [
     icon: Briefcase
   },
   {
-    title: "PC Shut Down (Power Tap)",
+    title: "Power Tap",
     description: "Remote PC shutdown app allowing users to turn off their computer directly from their Android mobile device.",
     link: "/powertap",
     color: "from-[#E3B341] to-[#D29922]",

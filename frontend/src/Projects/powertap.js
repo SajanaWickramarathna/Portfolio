@@ -36,7 +36,7 @@ const PowerTap = () => {
             
             <div className="relative z-10 flex flex-col h-full">
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white to-[#8B949E] mb-6 tracking-tight">
-                PC Shut Down (Power Tap)
+                Power Tap
               </h2>
               
               <p className="text-[#C9D1D9] text-base md:text-lg mb-10 leading-relaxed font-light">
