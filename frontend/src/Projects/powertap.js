@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowLeft, Download } from "lucide-react";
+import { SiElectron, SiReact, SiTypescript, SiNodedotjs, SiExpress, SiFirebase } from "react-icons/si";
 import Footer from "../components/footer";
 import { FaWindows, FaAndroid } from "react-icons/fa";
 
@@ -98,6 +99,42 @@ const PowerTap = () => {
                     Technologies Used
                  </h3>
                  <div className="flex flex-wrap gap-3">
+                   <motion.span
+                       whileHover={{ scale: 1.05 }}
+                       className="flex items-center gap-2 px-5 py-2.5 text-sm font-medium bg-white/[0.01] backdrop-blur-md border border-white/5 rounded-full shadow cursor-default text-[#C9D1D9] hover:text-white hover:border-white/20 hover:bg-white/[0.05] transition-all"
+                     >
+                       <SiElectron className="text-[#47848F]" /> Electron
+                   </motion.span>
+                   <motion.span
+                       whileHover={{ scale: 1.05 }}
+                       className="flex items-center gap-2 px-5 py-2.5 text-sm font-medium bg-white/[0.01] backdrop-blur-md border border-white/5 rounded-full shadow cursor-default text-[#C9D1D9] hover:text-white hover:border-white/20 hover:bg-white/[0.05] transition-all"
+                     >
+                       <SiReact className="text-[#61DAFB]" /> React Native
+                   </motion.span>
+                   <motion.span
+                       whileHover={{ scale: 1.05 }}
+                       className="flex items-center gap-2 px-5 py-2.5 text-sm font-medium bg-white/[0.01] backdrop-blur-md border border-white/5 rounded-full shadow cursor-default text-[#C9D1D9] hover:text-white hover:border-white/20 hover:bg-white/[0.05] transition-all"
+                     >
+                       <SiTypescript className="text-[#3178C6]" /> TypeScript
+                   </motion.span>
+                   <motion.span
+                       whileHover={{ scale: 1.05 }}
+                       className="flex items-center gap-2 px-5 py-2.5 text-sm font-medium bg-white/[0.01] backdrop-blur-md border border-white/5 rounded-full shadow cursor-default text-[#C9D1D9] hover:text-white hover:border-white/20 hover:bg-white/[0.05] transition-all"
+                     >
+                       <SiNodedotjs className="text-[#339933]" /> Node.js
+                   </motion.span>
+                   <motion.span
+                       whileHover={{ scale: 1.05 }}
+                       className="flex items-center gap-2 px-5 py-2.5 text-sm font-medium bg-white/[0.01] backdrop-blur-md border border-white/5 rounded-full shadow cursor-default text-[#C9D1D9] hover:text-white hover:border-white/20 hover:bg-white/[0.05] transition-all"
+                     >
+                       <SiExpress className="text-white" /> Express
+                   </motion.span>
+                   <motion.span
+                       whileHover={{ scale: 1.05 }}
+                       className="flex items-center gap-2 px-5 py-2.5 text-sm font-medium bg-white/[0.01] backdrop-blur-md border border-white/5 rounded-full shadow cursor-default text-[#C9D1D9] hover:text-white hover:border-white/20 hover:bg-white/[0.05] transition-all"
+                     >
+                       <SiFirebase className="text-[#FFCA28]" /> Firebase
+                   </motion.span>
                    <motion.span
                        whileHover={{ scale: 1.05 }}
                        className="flex items-center gap-2 px-5 py-2.5 text-sm font-medium bg-white/[0.01] backdrop-blur-md border border-white/5 rounded-full shadow cursor-default text-[#C9D1D9] hover:text-white hover:border-white/20 hover:bg-white/[0.05] transition-all"
