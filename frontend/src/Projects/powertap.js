@@ -157,6 +157,15 @@ const PowerTap = () => {
                <div className="relative z-10 flex flex-col items-center">
                  <h3 className="text-xl font-bold text-white mb-6 text-center tracking-wide">Get Power Tap Now</h3>
                  <p className="text-center text-[#8B949E] mb-6">Click the links on the left to download the PC and Android applications via Google Drive.</p>
+                 <a
+                    href="https://github.com/SajanaWickramarathna/PC-Shut-Down"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full flex items-center justify-center gap-3 bg-gradient-to-r from-[#E3B341] to-[#D29922] hover:from-[#D29922] hover:to-[#E3B341] text-white font-bold px-8 py-5 rounded-2xl shadow-[0_0_20px_rgba(227,179,65,0.3)] hover:shadow-[0_0_30px_rgba(227,179,65,0.5)] transition-all duration-300 transform hover:-translate-y-1 text-lg"
+                 >
+                    <span className="absolute inset-0 w-full h-full -mt-1 rounded-lg opacity-30 bg-gradient-to-b from-transparent via-transparent to-black"></span>
+                    <span className="relative text-[#0D1117] text-lg">View Source Code</span>
+                 </a>
                </div>
             </div>
           </motion.div>
