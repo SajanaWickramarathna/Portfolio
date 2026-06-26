@@ -51,7 +51,7 @@ const PowerTap = () => {
                 <div className="flex flex-col gap-4">
                   {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                   <a
-                    href="https://drive.google.com/file/d/1dZ78VPlYPckjdyD4OkUB1roUxaPjIxj-/view?usp=sharing"
+                    href="https://limewire.com/d/iFVqr#gegMAEhBte"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-4 bg-white/[0.05] border border-white/10 hover:border-[#E3B341]/50 hover:bg-white/[0.1] p-4 rounded-xl transition-all"
@@ -65,7 +65,7 @@ const PowerTap = () => {
                   </a>
                   {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                   <a
-                    href="https://drive.google.com/file/d/1WYxQzzQQQ1rzlnjP9iQR2VjDXXo_nCb3/view?usp=sharing"
+                    href="https://limewire.com/d/twiZm#KUfWNPUokv"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-4 bg-white/[0.05] border border-white/10 hover:border-[#E3B341]/50 hover:bg-white/[0.1] p-4 rounded-xl transition-all"
